@@ -10,6 +10,7 @@
 - pip
 - virtualenv
 - mininet
+- xterm
 
 ### Instalación
 Crear un virtualenv con python3 y activarlo:
