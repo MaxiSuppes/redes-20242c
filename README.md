@@ -25,7 +25,30 @@ Instalar las dependencias:
 pip install -r requirements.txt
 ```
 
-### Levantar la red
+### Instalación
+#### Levantar la red
 ```bash
 sudo python3 network.py
 ```
+
+#### Levantar ambos hosts
+```bash
+xterm host_1 host_2
+```
+Esto va a abrir dos terminales, una para cada host.
+
+#### Ejecutar cliente y servidor
+En cada terminal, ejecutar el servidor y el cliente:
+
+En el host_1:
+```bash
+python3 server.py
+```
+
+En el host_2:
+```bash
+python3 client.py
+```
+
+Esto va a iniciar el servidor en el host_1 y el cliente en el host_2. El cliente va a enviar un mensaje al servidor.
+
