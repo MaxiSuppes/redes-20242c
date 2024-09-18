@@ -1,13 +1,12 @@
-from mininet.net import Mininet
-from mininet.node import Controller
-from mininet.link import TCLink
 from mininet.cli import CLI
+from mininet.link import TCLink
 from mininet.log import setLogLevel
+from mininet.net import Mininet
 
 
 def network():
-    net = Mininet(controller=Controller, link=TCLink)
-    net.addController('controller', ip='127.0.0.1', port=6653)
+    net = Mininet(link=TCLink)
+    net.addController('controller', ip='127.0.0.1', port=1024)
 
     client = net.addHost('host_1', ip='10.0.0.1')
     server = net.addHost('host_2', ip='10.0.0.2')
