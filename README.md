@@ -48,8 +48,38 @@ python3 server.py
 
 En el host_2:
 ```bash
-python3 client.py
+python3 client_upload.py
+```
+ó
+
+```bash
+python3 client_download.py
 ```
 
-Esto va a iniciar el servidor en el host_1 y el cliente en el host_2. El cliente va a enviar un mensaje al servidor.
+
+Esto va a iniciar el servidor en el host_1 y el cliente en el host_2.
+
+Para conocer las opciones de ejecución de cada script, ejecutar `python3 server.py -h`, `python3 client_upload.py -h` o
+`python3 client_download.py -h`.
+
+Ejemplo:
+
+Para iniciar el servidor configurando un directorio específico:
+```bash
+python3 server.py -s /tmp
+```
+
+Para enviar un archivo al servidor:
+```bash
+python3 client_upload.py -s . -n ejemplo.txt
+```
+
+Para descargar un archivo desde servidor:
+```bash
+python3 client_download.py -d . -n ejemplo.txt
+```
+
+
+
+
 
