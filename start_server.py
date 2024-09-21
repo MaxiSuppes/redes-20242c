@@ -42,15 +42,16 @@ def start_server(host, port, storage_directory):
 
         if command.startswith('upload'):
             filename = command.split()[1]
+            print(f"Se va a recibir el archivo {filename}")
             receive_file(server_socket, client_address, filename, storage_directory)
         elif command.startswith('download'):
             filename = command.split()[1]
+            print(f"Se solicitó el archivo {filename}")
             send_file(server_socket, client_address, filename, storage_directory)
 
 
 def receive_file(sock, client_address, filename, storage_directory):
     file_path = os.path.join(storage_directory, filename)
-    print(f"Recibiendo archivo {filename} desde {client_address}")
 
     with open(file_path, 'wb') as f:
         while True:

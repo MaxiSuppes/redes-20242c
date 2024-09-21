@@ -39,16 +39,17 @@ def start_client():
     return socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 
-def upload_file(client_socket, server_host, server_port, filename):
+def upload_file(client_socket, server_host, server_port, source_directory, filename):
     client_socket.sendto(f"upload {filename}".encode(), (server_host, server_port))  # Envia al server el comando upload
 
-    if not os.path.exists(filename):
+    file_path = os.path.join(source_directory, filename)
+    if not os.path.exists(file_path):
         print(f"Archivo {filename} no encontrado")
         return
 
     print(f"Subiendo archivo {filename} al servidor")
 
-    with open(filename, 'rb') as f:
+    with open(file_path, 'rb') as f:
         while True:
             data = f.read(1024)
             if not data:
@@ -71,7 +72,7 @@ def main():
         return
 
     client_socket = start_client()
-    upload_file(client_socket, args.host, args.port, args.src)
+    upload_file(client_socket, args.host, args.port, args.src, args.name)
 
 
 if __name__ == "__main__":
