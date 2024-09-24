@@ -4,7 +4,7 @@ import os
 from src.Uploader import Uploader
 from utils.utils import show_help
 
-EXAMPLE_FILE_NAME = "ejemplo.txt"
+EXAMPLE_FILE_NAME = "server_storage/ejemplo.txt"
 HELP_LINES = [
     "Usage : upload [ - h ] [ - v | -q ] [ - H ADDR ] [ - p PORT ] [ - s FILEPATH ] [ - n FILENAME ]"
     "\n<command description>",

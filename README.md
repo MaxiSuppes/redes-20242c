@@ -37,6 +37,8 @@ sudo python3 network.py
 xterm host_1 host_2
 ```
 Esto va a abrir dos terminales, una para cada host.
+Nota: El tamaño de la fuente de la terminal por defecto es muy chico. Se puede modificar en el menu que se abre 
+apretando CTRL y click derecho a la vez.
 
 #### Ejecutar cliente y servidor
 En cada terminal, ejecutar el servidor y el cliente:
@@ -66,15 +68,15 @@ Ejemplo:
 
 Para iniciar el servidor configurando un directorio específico:
 ```bash
-python3 start_server.py -s /tmp
+python3 start_server.py -s server_storage
 ```
 
 Para enviar un archivo al servidor:
 ```bash
-python3 upload.py -s . -n ejemplo.txt
+python3 upload.py -s client_storage -n example.txt
 ```
 
 Para descargar un archivo desde servidor:
 ```bash
-python3 download.py -d . -n ejemplo.txt
+python3 download.py -d client_storage -n ejemplo.txt
 ```
