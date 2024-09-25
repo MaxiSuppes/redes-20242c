@@ -38,8 +38,7 @@ class Server:
         while True:
             try:
                 data, client_address = self.sock.recvfrom(PACKET_SIZE)
-                if data.decode().startswith('download'):
-                    print(f"Se recibió un comando download de {client_address}. Se abre nuevo thread")
+                print(f"Se recibió un comando download de {client_address}. Se abre nuevo thread")
                 threading.Thread(target=self.handle_client, args=(data, client_address), daemon=True).start()
             except Exception as e:
                 print(f"Error recibiendo info: {e}")
@@ -78,7 +77,7 @@ class Server:
                 missing_ack = True
                 while missing_ack:
                     print(f"Enviando paquete {packet_number}", file_chunk)
-                    packet = f"{packet_number}:".encode() + file_chunk
+                    packet = f"{packet_number}:".encode() + file_chunk  # {packet_number}:{file_chunk}
                     self.sock.sendto(packet, client_address)
                     try:
                         self.sock.settimeout(TIMEOUT)
