@@ -36,8 +36,13 @@ class Server:
         print(f"Servidor escuchando en {self.host}:{self.port}")
 
         while True:
-            data, client_address = self.sock.recvfrom(PACKET_SIZE)
-            threading.Thread(target=self.handle_client, args=(data, client_address), daemon=True).start()
+            try:
+                data, client_address = self.sock.recvfrom(PACKET_SIZE)
+                if data.decode().startswith('download'):
+                    print(f"Se recibió un comando download de {client_address}. Se abre nuevo thread")
+                threading.Thread(target=self.handle_client, args=(data, client_address), daemon=True).start()
+            except Exception as e:
+                print(f"Error recibiendo info: {e}")
 
     def receive_file(self, filename, client_address):
         # TODO: Hacerlo multiclient y con gestión de errores
@@ -62,31 +67,35 @@ class Server:
             return
 
         print(f"Enviando archivo {filename} a {client_address}")
-        packet_number = 0
         with open(file_path, 'rb') as file_to_send:
             while True:
-                data = file_to_send.read(PACKET_SIZE)
-                if not data:
+                file_chunk = file_to_send.read(PACKET_SIZE)
+                if not file_chunk:
                     print(f"Fin de archivo")
                     break
 
+                packet_number = 1
                 missing_ack = True
                 while missing_ack:
-                    print(f"Enviando paquete {packet_number}", data)
-                    self.sock.sendto(data, client_address)
+                    print(f"Enviando paquete {packet_number}", file_chunk)
+                    packet = f"{packet_number}:".encode() + file_chunk
+                    self.sock.sendto(packet, client_address)
                     try:
                         self.sock.settimeout(TIMEOUT)
                         ack, address = self.sock.recvfrom(PACKET_SIZE)
-                        if ack == f'ACK_{packet_number}'.encode():
-                            print(f"ACK {packet_number} recibido")
+                        print(f"Elemento recibido mientras se espera el ack: {ack.decode()}")
+                        if ack.decode() == f'ACK_{packet_number}':
+                            print(f"ACK correcto: {ack.decode()}")
                             missing_ack = False
                             packet_number += 1
                         else:
-                            print(f"ACK incorrecto: {ack}")
+                            print(f"ACK incorrecto: {ack.decode()}")
                     except socket.timeout:
                         print(f"Timeout. Reenviando paquete {packet_number}")
 
-        self.sock.sendto(b'END', client_address)
+        print(f"Fin de archivo. reseteando timeout")
         self.sock.settimeout(None)
+        print(f"Enviando end")
+        self.sock.sendto(b'END', client_address)
         print(f"Se envió el archivo {filename} correctamente")
 
