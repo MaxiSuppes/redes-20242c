@@ -4,7 +4,7 @@ from src.Downloader import Downloader
 from utils.utils import show_help
 
 DEFAULT_DOWNLOAD_DIR = '.'
-DEFAULT_FILE_NAME = 'ejemplo.txt'
+DEFAULT_FILE_NAME = 'server_storage/ejemplo.txt'
 
 HELP_LINES = [
     "Usage : download [ - h ] [ - v | -q ] [ - H ADDR ] [ - p PORT ] [ - d FILEPATH ] [ - n FILENAME ]\n",
