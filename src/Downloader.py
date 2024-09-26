@@ -1,5 +1,6 @@
 import os
 import socket
+import struct
 
 PACKET_SIZE = 1024
 PACKET_NUMBER_SIZE = 10  # Con 10 bytes se podrían mandar hasta 9999999999 paquetes
@@ -17,21 +18,20 @@ class Downloader:
         file_path = os.path.join(download_directory, filename)
 
         with open(file_path, 'wb') as file_to_download:
-            last_packet_received = 0
+            last_packet_received = 0  # El 0 representa que se recibió ningún paquete
             while True:
                 packet, address = self.sock.recvfrom(PACKET_SIZE + PACKET_NUMBER_SIZE)
-                data = packet.decode()
-                print("Paquete recibido: ", data)
-                if data == "END":
+                if packet == b"END":
                     break
 
-                packet_number, file_chunk = data.split(":",
-                                                       1)  # El maxsplit es para que no separe los ":" del contenido
-                if int(packet_number) == last_packet_received:
-                    print(f"Paquete {packet_number} ya recibido.")
-                else:
+                packet_number = struct.unpack('>I', packet[:4])[0]
+                file_chunk = packet[4:]
+                print(f"Paquete recibido: {packet_number} - {file_chunk}")
+                if int(packet_number) != last_packet_received:
+                    file_to_download.write(file_chunk)
                     last_packet_received = int(packet_number)
-                    file_to_download.write(file_chunk.encode())
+                else:
+                    print(f"Paquete {packet_number} ya recibido.")
 
                 print(f"Enviando ACK {packet_number} al servidor.")
                 self.sock.sendto(f'ACK_{packet_number}'.encode(), (self.host, self.port))

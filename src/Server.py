@@ -1,5 +1,6 @@
 import os
 import socket
+import struct
 import threading
 
 DEFAULT_STORAGE_DIRECTORY = './storage'
@@ -18,17 +19,16 @@ class Server:
             os.makedirs(self.storage_directory)
 
     def handle_client(self, data, client_address):
-        while True:
-            command = data.decode()
-            if command.startswith('upload'):
-                filename = command.split()[1]
-                print(f"Se va a recibir el archivo {filename}")
-                self.receive_file(filename, client_address)
-            elif command.startswith('download'):
-                filename = command.split()[1]
-                print(f"Se solicitó el archivo {filename}")
-                # TODO: Acá no habría enviar un ACK al cliente antes de empezar a enviar el archivo?
-                self.send_file(filename, client_address)
+        command = data.decode()
+        if command.startswith('upload'):
+            filename = command.split()[1]
+            print(f"Se va a recibir el archivo {filename}")
+            self.receive_file(filename, client_address)
+        elif command.startswith('download'):
+            filename = command.split()[1]
+            print(f"Se solicitó el archivo {filename}")
+            # TODO: Acá no habría enviar un ACK al cliente antes de empezar a enviar el archivo?
+            self.send_file(filename, client_address)
 
     def start(self):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -39,7 +39,9 @@ class Server:
             try:
                 data, client_address = self.sock.recvfrom(PACKET_SIZE)
                 print(f"Se recibió un comando download de {client_address}. Se abre nuevo thread")
-                threading.Thread(target=self.handle_client, args=(data, client_address), daemon=True).start()
+                client_handler_thread = threading.Thread(target=self.handle_client, args=(data, client_address),
+                                                         daemon=True)
+                client_handler_thread.start()
             except Exception as e:
                 print(f"Error recibiendo info: {e}")
 
@@ -66,18 +68,21 @@ class Server:
             return
 
         print(f"Enviando archivo {filename} a {client_address}")
-        with open(file_path, 'rb') as file_to_send:
+        with (open(file_path, 'rb') as file_to_send):
+            packet_number = 1
             while True:
                 file_chunk = file_to_send.read(PACKET_SIZE)
                 if not file_chunk:
                     print(f"Fin de archivo")
                     break
 
-                packet_number = 1
                 missing_ack = True
                 while missing_ack:
                     print(f"Enviando paquete {packet_number}", file_chunk)
-                    packet = f"{packet_number}:".encode() + file_chunk  # {packet_number}:{file_chunk}
+                    # Se arma el struct para que del otro lado no haya que hacer un .decode() para un pdf
+                    # no funca (por ejemplo
+                    header = struct.pack('>I', packet_number)  # >I empaqueta un unsigned int de 4 bytes en big-endian
+                    packet = header + file_chunk
                     self.sock.sendto(packet, client_address)
                     try:
                         self.sock.settimeout(TIMEOUT)
@@ -97,4 +102,3 @@ class Server:
         print(f"Enviando end")
         self.sock.sendto(b'END', client_address)
         print(f"Se envió el archivo {filename} correctamente")
-
