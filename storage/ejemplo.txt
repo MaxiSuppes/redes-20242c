@@ -1,0 +1,10 @@
+Archivo de ejemplo con el resumen de la final del mundial de futbol 2022.
+Mundial de Futbol 2022
+Final
+Argentina 3 - 3 Francia
+Estadio: Lusail Stadium
+Fecha: 18 de diciembre de 2022
+Goles:
+Argentina: Messi (23'), Di María (36'), Messi (108')
+Francia: Mbappé (80'), Mbappé (81'), Mbappé (118')
+Argentina se consagró campeón del mundo por tercera vez en su historia.

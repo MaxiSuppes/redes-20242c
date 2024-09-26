@@ -4,10 +4,10 @@ class Packet:
     def __init__(self) -> None:
         self.seq_numer: int
         self.is_ACK: bool
-        self.payload: str
+        self.payload: bytes
         self.length: int
 
-    def __init__(self, seq_number: int, is_ACK: bool, payload: str) -> None:
+    def __init__(self, seq_number: int, is_ACK: bool, payload: bytes) -> None:
         self.seq_number = seq_number
         self.is_ACK = is_ACK
         self.payload = payload
@@ -23,7 +23,7 @@ class Packet:
         return self.length == 0
     
     def get_payload(self) -> str:
-        return self.payload
+        return str(self.payload)
     
     def get_length(self) -> int:
         return len(self.payload)

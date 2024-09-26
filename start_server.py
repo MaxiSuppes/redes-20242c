@@ -2,6 +2,7 @@ import argparse
 from src.Server import Server
 from utils.utils import show_help
 
+
 DEFAULT_STORAGE_DIRECTORY = './storage'
 
 HELP_LINES = [

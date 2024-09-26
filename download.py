@@ -29,7 +29,7 @@ def get_params():
     parser.add_argument('-H', '--host', default='10.0.0.1')
     parser.add_argument('-p', '--port', type=int, default=12345)
     parser.add_argument('-d', '--dst', default=DEFAULT_DOWNLOAD_DIR)
-    parser.add_argument('-n', '--name', default='')  # TODO: Suponemos que el cliente sabe el nombre del archivo?
+    parser.add_argument('-n', '--name', default=DEFAULT_FILE_NAME)  # TODO: Suponemos que el cliente sabe el nombre del archivo?
 
     return parser.parse_args()
 

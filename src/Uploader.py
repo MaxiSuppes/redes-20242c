@@ -1,6 +1,6 @@
 import os
-from packet import Packet
-from host import Host
+from src import Packet
+from src import Host
 
 
 class Uploader(Host):
