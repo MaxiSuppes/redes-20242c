@@ -16,8 +16,11 @@ class Packet:
     def get_seq_number(self) -> int:
         return self.seq_number
     
-    def is_ACK(self) -> bool:
+    def is_ack(self) -> bool:
         return self.is_ACK
+    
+    def is_empty(self) ->bool:
+        return self.length == 0
     
     def get_payload(self) -> str:
         return self.payload

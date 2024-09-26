@@ -1,13 +1,13 @@
 import os
 import socket
+from host import Host
 
 DEFAULT_STORAGE_DIRECTORY = './storage'
 
 
-class Server:
+class Server(Host):
     def __init__(self, host, port, storage_directory):
-        self.host = host
-        self.port = port
+        super().__init__(host, port)
         self.storage_directory = storage_directory
         self.client_address = None
         self.sock = None
@@ -18,8 +18,8 @@ class Server:
         print(f"Servidor escuchando en {self.host}:{self.port}")
 
         while True:
-            data, self.client_address = self.sock.recvfrom(1024)
-            command = data.decode()
+            packet, self.client_address = self.receive_packet()
+            command = packet.payload
             print(f"Comando recibido: {command} desde {self.client_address}")
 
             if command.startswith('upload'):
@@ -37,11 +37,12 @@ class Server:
 
         with open(file_path, 'wb') as f:
             while True:
-                data, address = self.sock.recvfrom(1024)
-                if data == b'END':
+                packet, address = self.receive_packet()
+                payload = packet.payload
+                if payload == b'END':
                     break
-                f.write(data)
-                self.sock.sendto(b'ACK', self.client_address)
+                f.write(payload)
+                self.send_ack(packet.get_seq_number(), client_address=self.client_address)
 
         print(f"Archivo {filename} guardado en {self.storage_directory}")
 
@@ -56,16 +57,19 @@ class Server:
         print(f"Enviando archivo {filename} a {self.client_address}")
 
         with open(file_path, 'rb') as f:
+            seq_number = 0
             while True:
                 data = f.read(1024)
                 if not data:
                     break
-                self.sock.sendto(data, self.client_address)
-                ack, address = self.sock.recvfrom(1024)
-                if ack != b'ACK':
+                self.send_payload(data, seq_number, client_address=self.client_address)
+                packet = self.receive_packet()[0]
+                if  not packet.is_ACK and packet.seq_number != seq_number:
                     print("No se recibió un ACK. Reenviando paquete.")
                     f.seek(-1024, os.SEEK_CUR)  # Retrocede el puntero del archivo para volver a enviar el paquete
+                else:
+                    seq_number += 1
 
-        self.sock.sendto(b'END', self.client_address)
+        self.send_payload(b'END', seq_number)
         print(f"Se envió el archivo {filename} correctamente")
 
