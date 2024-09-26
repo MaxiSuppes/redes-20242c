@@ -1,4 +1,6 @@
 import argparse
+import threading
+
 from src.Server import Server
 from utils.utils import show_help
 
@@ -35,7 +37,8 @@ def main():
         show_help(HELP_LINES)
 
     server = Server(params.host, params.port, params.storage)
-    server.start()
+    listen_thread = threading.Thread(target=server.start)
+    listen_thread.start()
 
 
 if __name__ == "__main__":

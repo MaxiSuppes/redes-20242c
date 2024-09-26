@@ -5,7 +5,7 @@ import threading
 
 DEFAULT_STORAGE_DIRECTORY = './storage'
 PACKET_SIZE = 1024
-TIMEOUT = 5
+TIMEOUT = 3
 
 
 class Server:
@@ -13,7 +13,8 @@ class Server:
         self.host = host
         self.port = port
         self.storage_directory = storage_directory
-        self.sock = None
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.sock.bind((self.host, self.port))
 
         if not os.path.exists(self.storage_directory):
             os.makedirs(self.storage_directory)
@@ -31,14 +32,11 @@ class Server:
             self.send_file(filename, client_address)
 
     def start(self):
-        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.sock.bind((self.host, self.port))
         print(f"Servidor escuchando en {self.host}:{self.port}")
 
         while True:
             try:
                 data, client_address = self.sock.recvfrom(PACKET_SIZE)
-                print(f"Se recibió un comando download de {client_address}. Se abre nuevo thread")
                 client_handler_thread = threading.Thread(target=self.handle_client, args=(data, client_address),
                                                          daemon=True)
                 client_handler_thread.start()
@@ -78,7 +76,7 @@ class Server:
 
                 missing_ack = True
                 while missing_ack:
-                    print(f"Enviando paquete {packet_number}", file_chunk)
+                    print(f"Enviando paquete {packet_number}", client_address)
                     # Se arma el struct para que del otro lado no haya que hacer un .decode() para un pdf
                     # no funca (por ejemplo
                     header = struct.pack('>I', packet_number)  # >I empaqueta un unsigned int de 4 bytes en big-endian
@@ -87,6 +85,9 @@ class Server:
                     try:
                         self.sock.settimeout(TIMEOUT)
                         ack, address = self.sock.recvfrom(PACKET_SIZE)
+                        if address != client_address:
+                            print("Ignorando mensaje de otro cliente")
+
                         print(f"Elemento recibido mientras se espera el ack: {ack.decode()}")
                         if ack.decode() == f'ACK_{packet_number}':
                             print(f"ACK correcto: {ack.decode()}")

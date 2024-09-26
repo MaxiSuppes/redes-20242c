@@ -26,7 +26,7 @@ class Downloader:
 
                 packet_number = struct.unpack('>I', packet[:4])[0]
                 file_chunk = packet[4:]
-                print(f"Paquete recibido: {packet_number} - {file_chunk}")
+                print(f"Paquete recibido: {packet_number}")
                 if int(packet_number) != last_packet_received:
                     file_to_download.write(file_chunk)
                     last_packet_received = int(packet_number)

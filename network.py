@@ -8,13 +8,15 @@ def network():
     net = Mininet(link=TCLink)
     net.addController('controller', ip='127.0.0.1', port=1024)
 
-    client = net.addHost('host_1', ip='10.0.0.1')
-    server = net.addHost('host_2', ip='10.0.0.2')
+    server = net.addHost('host_1', ip='10.0.0.1')
+    client_1 = net.addHost('host_2', ip='10.0.0.2')
+    client_2 = net.addHost('host_3', ip='10.0.0.3')
 
     switch = net.addSwitch('switch', dpid='0000000000000001')  # El Datapath ID (dpid) es como la IP del switch
 
-    net.addLink(client, switch)
     net.addLink(server, switch)
+    net.addLink(client_1, switch)
+    net.addLink(client_2, switch)
 
     net.start()
     net.pingAll()
