@@ -1,5 +1,4 @@
 import os
-import socket
 from src import Host
 
 DEFAULT_STORAGE_DIRECTORY = './storage'
