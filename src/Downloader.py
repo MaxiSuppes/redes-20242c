@@ -13,15 +13,5 @@ class Downloader(Host):
 
     def download(self, download_directory, filename):
         self.request_download(filename)
-
-        file_path = os.path.join(download_directory, filename)
-
-        with open(file_path, 'wb') as f:
-            while True:
-                packet = self.receive_packet()[0]
-                if packet.payload == b'END':
-                    break
-                f.write(packet.payload)
-                self.send_ack(packet.seq_number)
-
+        self.receive_file(download_directory, filename)
         print(f"Archivo {filename} descargado en {download_directory}")

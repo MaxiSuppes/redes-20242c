@@ -32,18 +32,8 @@ class Server(Host):
                 # TODO: Acá no habría enviar un ACK al cliente antes de empezar a enviar el archivo?
                 self.send_file(filename)
 
-    def receive_file(self, filename):
-        file_path = os.path.join(self.storage_directory, filename)
-
-        with open(file_path, 'wb') as f:
-            while True:
-                packet, address = self.receive_packet()
-                payload = packet.payload
-                if payload == b'END':
-                    break
-                f.write(payload)
-                self.send_ack(packet.get_seq_number(), client_address=self.client_address)
-
+    def receive_file_from_client(self, filename):
+        self.receive_file(self.storage_directory, filename, client_address=self.client_address)
         print(f"Archivo {filename} guardado en {self.storage_directory}")
 
     def send_file_to_client(self, filename):

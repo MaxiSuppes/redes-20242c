@@ -26,6 +26,19 @@ class Host:
         else:
             self.sock.sendto(packet.as_bytes(), (self.host, self.port))
 
+    def receive_file(self, target_dir,filename, client_address=None):
+        file_path = os.path.join(target_dir, filename)
+
+        with open(file_path, 'wb') as f:
+            while True:
+                packet = self.receive_packet()[0]
+                payload = packet.payload
+                if payload == b'END':
+                    break
+                f.write(payload)
+                self.send_ack(packet.get_seq_number(), client_address=client_address)
+
+
     def send_file(self, filename, file_path, client_address=None):
 
         with open(file_path, 'rb') as f:
