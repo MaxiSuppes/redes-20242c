@@ -22,19 +22,4 @@ class Uploader(Host):
         # TODO: Acá no habría que esperar el ack del servidor antes de empezar a recibir el archivo?
         print(f"Subiendo archivo {filename} al servidor")
 
-        with open(file_path, 'rb') as f:
-            seq_number = 0
-            while True:
-                payload = f.read(1024)
-                if not payload:
-                    break
-                self.send_payload(payload, seq_number)
-                packet = self.receive_packet()[0]
-                if  not packet.is_ACK and packet.seq_number != seq_number:
-                    print("No se recibió ACK, reenviando bloque")
-                    f.seek(-1024, os.SEEK_CUR)
-                else:
-                    seq_number += 1
-
-        self.send_payload(b'END', seq_number)
-        print(f"Archivo {filename} subido correctamente")
+        self.send_file(filename, file_path)

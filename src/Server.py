@@ -46,7 +46,7 @@ class Server(Host):
 
         print(f"Archivo {filename} guardado en {self.storage_directory}")
 
-    def send_file(self, filename):
+    def send_file_to_client(self, filename):
         file_path = os.path.join(self.storage_directory, filename)
 
         if not os.path.exists(file_path):
@@ -56,20 +56,5 @@ class Server(Host):
 
         print(f"Enviando archivo {filename} a {self.client_address}")
 
-        with open(file_path, 'rb') as f:
-            seq_number = 0
-            while True:
-                data = f.read(1024)
-                if not data:
-                    break
-                self.send_payload(data, seq_number, client_address=self.client_address)
-                packet = self.receive_packet()[0]
-                if  not packet.is_ACK and packet.seq_number != seq_number:
-                    print("No se recibió un ACK. Reenviando paquete.")
-                    f.seek(-1024, os.SEEK_CUR)  # Retrocede el puntero del archivo para volver a enviar el paquete
-                else:
-                    seq_number += 1
-
-        self.send_payload(b'END', seq_number)
-        print(f"Se envió el archivo {filename} correctamente")
+        self.send_file(filename, file_path, client_address=self.client_address)
 
