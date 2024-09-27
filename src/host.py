@@ -52,7 +52,6 @@ class Host:
                 print(f"FILE: {file_path}")
                 self.send_ack(packet.get_seq_number(), client_address=client_address)
 
-
     def send_file(self, filename, file_path, client_address=None):
         with open(file_path, 'rb') as f:
             seq_number = 0
