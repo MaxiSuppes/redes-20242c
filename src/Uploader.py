@@ -7,9 +7,9 @@ TIMEOUT = 5
 
 
 class Uploader:
-    def __init__(self, host, port):
-        self.host = host
-        self.port = port
+    def __init__(self, server_ip, server_port):
+        self.server_ip = server_ip
+        self.server_port = server_port
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     def upload_file(self, source_directory, filename):
@@ -18,8 +18,8 @@ class Uploader:
             print(f"Archivo {filename} no encontrado")
             return
 
-        self.sock.sendto(f"upload {filename}".encode(), (self.host, self.port))
-        print(f"Enviando archivo {filename} a {self.host}:{self.port}")
+        self.sock.sendto(f"upload {filename}".encode(), (self.server_ip, self.server_port))
+        print(f"Enviando archivo {filename} a {self.server_ip}:{self.server_port}")
 
         with (open(file_path, 'rb') as file_to_send):
             packet_number = 1
@@ -31,12 +31,12 @@ class Uploader:
 
                 missing_ack = True
                 while missing_ack:
-                    print(f"Enviando paquete {packet_number}", f"{self.host}:{self.port}")
+                    print(f"Enviando paquete {packet_number}", f"{self.server_ip}:{self.server_port}")
                     # Se arma el struct para que del ot ro lado no haya que hacer un .decode() para un pdf
                     # no funca (por ejemplo)
                     header = struct.pack('>I', packet_number)  # >I empaqueta un unsigned int de 4 bytes en big-endian
                     packet = header + file_chunk
-                    self.sock.sendto(packet, (self.host, self.port))
+                    self.sock.sendto(packet, (self.server_ip, self.server_port))
                     try:
                         self.sock.settimeout(TIMEOUT)
                         ack, address = self.sock.recvfrom(PACKET_SIZE)
@@ -53,5 +53,5 @@ class Uploader:
         print(f"Fin de archivo. reseteando timeout")
         self.sock.settimeout(None)
         print(f"Enviando end")
-        self.sock.sendto(b'END', (self.host, self.port))
+        self.sock.sendto(b'END', (self.server_ip, self.server_port))
         print(f"Se envió el archivo {filename} correctamente")

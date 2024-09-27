@@ -7,13 +7,13 @@ PACKET_NUMBER_SIZE = 10  # Con 10 bytes se podrían mandar hasta 9999999999 paqu
 
 
 class Downloader:
-    def __init__(self, host, port):
-        self.host = host
-        self.port = port
+    def __init__(self, server_ip, server_port):
+        self.server_ip = server_ip
+        self.server_port = server_port
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     def download(self, download_directory, filename):
-        self.sock.sendto(f"download {filename}".encode(), (self.host, self.port))
+        self.sock.sendto(f"download {filename}".encode(), (self.server_ip, self.server_port))
 
         file_path = os.path.join(download_directory, filename)
 
@@ -34,6 +34,6 @@ class Downloader:
                     print(f"Paquete {packet_number} ya recibido.")
 
                 print(f"Enviando ACK {packet_number} al servidor.")
-                self.sock.sendto(f'ACK_{packet_number}'.encode(), (self.host, self.port))
+                self.sock.sendto(f'ACK_{packet_number}'.encode(), (self.server_ip, self.server_port))
 
         print(f"Archivo {filename} descargado en {download_directory}")
