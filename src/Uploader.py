@@ -1,9 +1,7 @@
 import os
 import socket
-import struct
 
-PACKET_SIZE = 1024
-TIMEOUT = 5
+from src.UDPStopAndWait import UDPStopAndWait
 
 
 class Uploader:
@@ -12,46 +10,13 @@ class Uploader:
         self.server_port = server_port
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    def upload_file(self, source_directory, filename):
+    def upload(self, source_directory, filename):
         file_path = os.path.join(source_directory, filename)
         if not os.path.exists(file_path):
             print(f"Archivo {filename} no encontrado")
             return
 
-        self.sock.sendto(f"upload {filename}".encode(), (self.server_ip, self.server_port))
-        print(f"Enviando archivo {filename} a {self.server_ip}:{self.server_port}")
-
-        with (open(file_path, 'rb') as file_to_send):
-            packet_number = 1
-            while True:
-                file_chunk = file_to_send.read(PACKET_SIZE)
-                if not file_chunk:
-                    print(f"Fin de archivo")
-                    break
-
-                missing_ack = True
-                while missing_ack:
-                    print(f"Enviando paquete {packet_number}", f"{self.server_ip}:{self.server_port}")
-                    # Se arma el struct para que del ot ro lado no haya que hacer un .decode() para un pdf
-                    # no funca (por ejemplo)
-                    header = struct.pack('>I', packet_number)  # >I empaqueta un unsigned int de 4 bytes en big-endian
-                    packet = header + file_chunk
-                    self.sock.sendto(packet, (self.server_ip, self.server_port))
-                    try:
-                        self.sock.settimeout(TIMEOUT)
-                        ack, address = self.sock.recvfrom(PACKET_SIZE)
-                        print(f"Elemento recibido mientras se espera el ack: {ack.decode()}")
-                        if ack.decode() == f'ACK_{packet_number}':
-                            print(f"ACK correcto: {ack.decode()}")
-                            missing_ack = False
-                            packet_number += 1
-                        else:
-                            print(f"ACK incorrecto: {ack.decode()}")
-                    except socket.timeout:
-                        print(f"Timeout. Reenviando paquete {packet_number}")
-
-        print(f"Fin de archivo. reseteando timeout")
-        self.sock.settimeout(None)
-        print(f"Enviando end")
-        self.sock.sendto(b'END', (self.server_ip, self.server_port))
+        protocol = UDPStopAndWait(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
+        protocol.send_message(f"upload {filename}".encode())
+        protocol.send_file(file_path)
         print(f"Se envió el archivo {filename} correctamente")
