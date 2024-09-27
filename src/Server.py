@@ -9,7 +9,8 @@ class Server(Host):
     def __init__(self, host, port, storage_directory):
         super().__init__(host, port)
         self.storage_directory = storage_directory
-        self.client_address = None
+        #self.client_address = None
+        self.sock.bind((self.host, self.port))
         self.clients = {}
 
     def start(self):
@@ -17,6 +18,7 @@ class Server(Host):
 
         while True:
             packet, client_address = self.receive_packet()
+            print(packet.get_payload())
             if client_address not in self.clients.keys():
                 print("Nuevo cliente: ", client_address)
                 self.clients[client_address] = queue.Queue()
@@ -42,11 +44,11 @@ class Server(Host):
         except UnicodeDecodeError:
             print(f"Comando no reconocido: {command}")
 
-    def receive_file_from_client(self, filename):
-        self.receive_file(self.storage_directory, filename, client_address=self.client_address)
+    def receive_file_from_client(self, filename, client_address):
+        self.receive_file(self.storage_directory, filename, client_address=client_address)
         print(f"Archivo {filename} guardado en {self.storage_directory}")
 
-    def send_file_to_client(self, filename):
+    def send_file_to_client(self, filename, client_address):
         file_path = os.path.join(self.storage_directory, filename)
 
         if not os.path.exists(file_path):
@@ -54,6 +56,6 @@ class Server(Host):
             # TODO: Enviar mensaje de error al cliente?
             return
 
-        print(f"Enviando archivo {filename} a {self.client_address}")
-        self.send_file(filename, file_path, client_address=self.client_address)
+        print(f"Enviando archivo {filename} a {client_address}")
+        self.send_file(filename, file_path, client_address=client_address)
 

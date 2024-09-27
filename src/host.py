@@ -65,7 +65,7 @@ class Host:
 
                 ack_received = False
                 while not ack_received:
-                    socket.settimeout(1)
+                    self.sock.settimeout(1)
                     try:
                         packet = self.receive_packet()[0]
                         if packet.is_ACK and packet.seq_number == seq_number:
