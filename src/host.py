@@ -1,6 +1,6 @@
 import socket
 import os
-from src import Packet
+from .packet import Packet
 
 class Host:
     def __init__(self, host, port):
