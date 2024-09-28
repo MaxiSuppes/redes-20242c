@@ -36,42 +36,56 @@ class UDPSACK:
         with open(file_path, 'rb') as file_to_send:
             packet_number = 1
             window = {}  # Paquetes que han sido enviados y no confirmados
+            finished_sending = False  # Indica si hemos terminado de leer el archivo
 
             while True:
-                while len(window) < self.window_size:
+                # Enviar paquetes hasta llenar la ventana, solo si no hemos terminado de leer el archivo
+                while len(window) < self.window_size and not finished_sending:
                     file_chunk = file_to_send.read(PACKET_SIZE)
+
+                    # Si no hay más datos que leer del archivo
                     if not file_chunk:
+                        print("Todos los paquetes han sido enviados. Esperando confirmaciones.")
+                        finished_sending = True
                         break
 
+                    # Crear el paquete y enviarlo
                     packet = Packet(packet_number, file_chunk).as_bytes()
                     self.send_message(packet)
                     print(f"Enviado paquete {packet_number} a {self.external_host_address}")
 
+                    # Añadir el paquete a la ventana para posible retransmisión
                     window[packet_number] = packet
                     packet_number += 1
 
+                # Si ya hemos enviado todos los paquetes y la ventana está vacía, hemos terminado
+                if finished_sending and not window:
+                    print("Todos los paquetes han sido confirmados. Enviando END.")
+                    # Enviar paquete de finalización "END"
+                    packet = Packet(packet_number, b"END").as_bytes()
+                    self.send_message(packet)
+                    break
+
+                # Esperar SACK
                 try:
                     sack = self.receive_sack(timeout=TIMEOUT)
                     print(f"Recibido SACK: {sack}")
 
+                    # Eliminar los paquetes confirmados de la ventana
                     for acked_packet in sack["acks"]:
                         if acked_packet in window:
-                            print(f"Paquete {acked_packet} confirmado")
+                            print(f"Paquete {acked_packet} confirmado, eliminando de la ventana")
                             del window[acked_packet]
 
                 except self.timeout_error_class():
-                    print("Timeout esperando SACK, retransmitiendo paquetes no confirmados")
+                    print("Timeout esperando SACK, retransmitiendo paquetes no confirmados.")
+                    # Retransmitir los paquetes que aún no han sido confirmados
                     for packet_num, packet_data in window.items():
                         print(f"Retransmitiendo paquete {packet_num}")
                         self.send_message(packet_data)
 
-                if not window and not file_chunk:
-                    break
 
-        # Enviar paquete de finalización "END"
-        print(f"Enviando paquete END")
-        packet = Packet(packet_number, b"END").as_bytes()
-        self.send_message(packet)
+
 
     def receive_file(self, file_path):
         with open(file_path, 'wb') as file_to_storage:
@@ -82,6 +96,7 @@ class UDPSACK:
 
                 # Si recibimos el paquete "END", terminamos
                 if packet.payload() == b"END":
+                    print("Paquete END recibido. Finalizando recepción.")
                     break
 
                 packet_number = packet.sequence_number()
@@ -105,8 +120,10 @@ class UDPSACK:
 
                 # Enviar SACK con los paquetes recibidos hasta ahora
                 acked_packets = list(range(1, expected_packet)) + list(self.received_packets.keys())
-                sack_message = f"SACK {sorted(acked_packets)}"
+                sack_message = f"SACK {' '.join(map(str, sorted(acked_packets)))}"
                 self.send_message(sack_message.encode())
+
+
 
     def receive_sack(self, timeout=None):
         raw_sack, address = self.connection.recvfrom(1024)
