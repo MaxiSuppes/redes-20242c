@@ -1,10 +1,9 @@
 import argparse
 
 from src.Downloader import Downloader
-from utils.utils import show_help
-
-DEFAULT_DOWNLOAD_DIR = '.'
-DEFAULT_FILE_NAME = 'server_storage/ejemplo.txt'
+from src.Logger import setup_logging
+from src.settings import settings
+from src.utils import show_help
 
 HELP_LINES = [
     "Usage : download [ - h ] [ - v | -q ] [ - H ADDR ] [ - p PORT ] [ - d FILEPATH ] [ - n FILENAME ]\n",
@@ -28,8 +27,9 @@ def get_params():
     parser.add_argument('-q', '--quiet', action='store_true', default=False)
     parser.add_argument('-H', '--host', default='10.0.0.1')
     parser.add_argument('-p', '--port', type=int, default=12345)
-    parser.add_argument('-d', '--dst', default=DEFAULT_DOWNLOAD_DIR)
-    parser.add_argument('-n', '--name', default='')  # TODO: Suponemos que el cliente sabe el nombre del archivo?
+    parser.add_argument('-d', '--dst', default=settings.download_directory())
+    # TODO: Suponemos que el cliente sabe el nombre del archivo?
+    parser.add_argument('-n', '--name', default=settings.server_example_file())
 
     return parser.parse_args()
 
@@ -38,6 +38,8 @@ def main():
     params = get_params()
     if hasattr(params, 'help') and params.help:
         show_help(HELP_LINES)
+
+    setup_logging(params.verbose, params.quiet)
 
     downloader = Downloader(params.host, params.port)  # Server IP, Server port
     downloader.download(params.dst, params.name)

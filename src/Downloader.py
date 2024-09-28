@@ -1,6 +1,9 @@
 import os
 import socket
+
+from src.Logger import logger
 from src.UDPStopAndWait import UDPStopAndWait
+from src.settings import settings
 
 
 class Downloader:
@@ -13,7 +16,7 @@ class Downloader:
     def download(self, download_directory, filename):
         protocol = UDPStopAndWait(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
 
-        protocol.send_message(f"download {filename}".encode())
+        protocol.send_message(f"{settings.download_command()} {filename}".encode())
         file_path = os.path.join(download_directory, filename)
         protocol.receive_file(file_path)
-        print(f"Archivo guardado en {file_path}")
+        logger.info(f"Archivo guardado en {file_path}")
