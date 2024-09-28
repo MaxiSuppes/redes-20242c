@@ -2,8 +2,8 @@ import os
 import queue
 import socket
 import threading
-
-from src.UDPStopAndWait import UDPStopAndWait
+#from src.UDPStopAndWait import UDPStopAndWait
+from src.UDPSACK import UDPSACK
 
 DEFAULT_STORAGE_DIRECTORY = './storage'
 PACKET_SIZE = 1024
@@ -42,7 +42,9 @@ class Server:
             if command.startswith('upload'):
                 filename = command.split()[1]
                 print(f"Se va a recibir el archivo {filename}")
-                protocol = UDPStopAndWait(connection=self.sock, external_host_address=client_address,
+                """ protocol = UDPStopAndWait(connection=self.sock, external_host_address=client_address,
+                                          message_queue=self.clients[client_address]) """
+                protocol = UDPSACK(connection=self.sock, external_host_address=client_address,
                                           message_queue=self.clients[client_address])
                 file_path = os.path.join(self.storage_directory, filename)
                 protocol.receive_file(file_path)
@@ -55,7 +57,9 @@ class Server:
                     return
 
                 print(f"Se solicitó el archivo {filename}")
-                protocol = UDPStopAndWait(connection=self.sock, external_host_address=client_address,
+                """ protocol = UDPStopAndWait(connection=self.sock, external_host_address=client_address,
+                                          message_queue=self.clients[client_address]) """
+                protocol = UDPSACK(connection=self.sock, external_host_address=client_address,
                                           message_queue=self.clients[client_address])
                 protocol.send_file(file_path)
                 print(f"Se envió el archivo {filename} correctamente")

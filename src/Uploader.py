@@ -1,7 +1,8 @@
 import os
 import socket
 
-from src.UDPStopAndWait import UDPStopAndWait
+#from src.UDPStopAndWait import UDPStopAndWait
+from src.UDPSACK import UDPSACK
 
 
 class Uploader:
@@ -16,7 +17,8 @@ class Uploader:
             print(f"Archivo {filename} no encontrado")
             return
 
-        protocol = UDPStopAndWait(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
+        #protocol = UDPStopAndWait(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
+        protocol = UDPSACK(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
         protocol.send_message(f"upload {filename}".encode())
         protocol.send_file(file_path)
         print(f"Se envió el archivo {filename} correctamente")
