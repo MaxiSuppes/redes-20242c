@@ -39,7 +39,7 @@ def main():
     if hasattr(params, 'help') and params.help:
         show_help(HELP_LINES)
 
-    downloader = Downloader(params.host, params.port)
+    downloader = Downloader(params.host, params.port)  # Server IP, Server port
     downloader.download(params.dst, params.name)
 
 

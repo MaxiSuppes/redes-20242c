@@ -38,8 +38,8 @@ def main():
     if hasattr(params, 'help') and params.help:
         show_help(HELP_LINES)
 
-    uploader = Uploader(params.host, params.port)
-    uploader.upload_file(params.src, params.name)
+    uploader = Uploader(params.host, params.port)  # Server IP, Server port
+    uploader.upload(params.src, params.name)
 
 
 if __name__ == "__main__":

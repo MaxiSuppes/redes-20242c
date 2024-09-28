@@ -1,33 +1,22 @@
 import os
 import socket
 
+from src.UDPStopAndWait import UDPStopAndWait
+
 
 class Uploader:
-    def __init__(self, host, port):
-        self.host = host
-        self.port = port
+    def __init__(self, server_ip, server_port):
+        self.server_ip = server_ip
+        self.server_port = server_port
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    def upload_file(self, source_directory, filename):
+    def upload(self, source_directory, filename):
         file_path = os.path.join(source_directory, filename)
         if not os.path.exists(file_path):
             print(f"Archivo {filename} no encontrado")
             return
 
-        self.sock.sendto(f"upload {filename}".encode(), (self.host, self.port))
-        # TODO: Acá no habría que esperar el ack del servidor antes de empezar a recibir el archivo?
-        print(f"Subiendo archivo {filename} al servidor")
-
-        with open(file_path, 'rb') as f:
-            while True:
-                data = f.read(1024)
-                if not data:
-                    break
-                self.sock.sendto(data, (self.host, self.port))
-                ack, address = self.sock.recvfrom(1024)
-                if ack != b'ACK':
-                    print("No se recibió ACK, reenviando bloque")
-                    f.seek(-1024, os.SEEK_CUR)
-
-        self.sock.sendto(b'END', (self.host, self.port))
-        print(f"Archivo {filename} subido correctamente")
+        protocol = UDPStopAndWait(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
+        protocol.send_message(f"upload {filename}".encode())
+        protocol.send_file(file_path)
+        print(f"Se envió el archivo {filename} correctamente")
