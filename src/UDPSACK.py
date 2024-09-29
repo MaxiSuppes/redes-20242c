@@ -3,7 +3,7 @@ import socket
 from src.Packet import Packet
 
 PACKET_SIZE = 1024
-TIMEOUT = 2
+TIMEOUT = 5
 WINDOW_SIZE = 5  
 class UDPSACK:
     def __init__(self, connection, external_host_address, message_queue=None):
@@ -36,20 +36,18 @@ class UDPSACK:
         with open(file_path, 'rb') as file_to_send:
             packet_number = 1
             window = {}  # Paquetes que han sido enviados y no confirmados
-            finished_sending = False  # Indica si hemos terminado de leer el archivo
+            finished_sending = False
 
             while True:
                 # Enviar paquetes hasta llenar la ventana, solo si no hemos terminado de leer el archivo
                 while len(window) < self.window_size and not finished_sending:
                     file_chunk = file_to_send.read(PACKET_SIZE)
 
-                    # Si no hay más datos que leer del archivo
                     if not file_chunk:
                         print("Todos los paquetes han sido enviados. Esperando confirmaciones.")
                         finished_sending = True
                         break
 
-                    # Crear el paquete y enviarlo
                     packet = Packet(packet_number, file_chunk).as_bytes()
                     self.send_message(packet)
                     print(f"Enviado paquete {packet_number} a {self.external_host_address}")
@@ -58,10 +56,8 @@ class UDPSACK:
                     window[packet_number] = packet
                     packet_number += 1
 
-                # Si ya hemos enviado todos los paquetes y la ventana está vacía, hemos terminado
                 if finished_sending and not window:
                     print("Todos los paquetes han sido confirmados. Enviando END.")
-                    # Enviar paquete de finalización "END"
                     packet = Packet(packet_number, b"END").as_bytes()
                     self.send_message(packet)
                     break
@@ -71,7 +67,6 @@ class UDPSACK:
                     sack = self.receive_sack(timeout=TIMEOUT)
                     print(f"Recibido SACK: {sack}")
 
-                    # Eliminar los paquetes confirmados de la ventana
                     for acked_packet in sack["acks"]:
                         if acked_packet in window:
                             print(f"Paquete {acked_packet} confirmado, eliminando de la ventana")
@@ -79,20 +74,20 @@ class UDPSACK:
 
                 except self.timeout_error_class():
                     print("Timeout esperando SACK, retransmitiendo paquetes no confirmados.")
-                    # Retransmitir los paquetes que aún no han sido confirmados
                     for packet_num, packet_data in window.items():
                         print(f"Retransmitiendo paquete {packet_num}")
                         self.send_message(packet_data)
 
-
-
-
     def receive_file(self, file_path):
         with open(file_path, 'wb') as file_to_storage:
-            expected_packet = 1  # El próximo paquete que esperamos recibir
+            expected_packet = 1 
 
             while True:
-                packet = self.receive_packet()
+                try:
+                    packet = self.receive_packet(timeout=TIMEOUT)
+                except self.timeout_error_class():
+                    print("Timeout esperando paquetes. Terminando recepción.")
+                    break
 
                 # Si recibimos el paquete "END", terminamos
                 if packet.payload() == b"END":
@@ -122,11 +117,17 @@ class UDPSACK:
                 acked_packets = list(range(1, expected_packet)) + list(self.received_packets.keys())
                 sack_message = f"SACK {' '.join(map(str, sorted(acked_packets)))}"
                 self.send_message(sack_message.encode())
+                print(f"Enviado SACK con acks: {acked_packets}")
 
-
-
+        
     def receive_sack(self, timeout=None):
-        raw_sack, address = self.connection.recvfrom(1024)
-        sack_data = raw_sack.decode().replace("SACK", "").strip()
-        acked_packets = set(map(int, sack_data.split()))
-        return {"acks": acked_packets}
+        try:
+            raw_sack, address = self.connection.recvfrom(1024)
+            print(f"Recibido raw SACK desde {address}: {raw_sack}")
+            sack_data = raw_sack.decode().replace("SACK", "").strip()
+            print(f"Datos SACK decodificados: {sack_data}")
+            acked_packets = set(map(int, sack_data.split()))
+            return {"acks": acked_packets}
+        except Exception as e:
+            print(f"Error recibiendo SACK: {e}")
+            return {"acks": set()}

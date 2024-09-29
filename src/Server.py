@@ -9,7 +9,6 @@ DEFAULT_STORAGE_DIRECTORY = './storage'
 PACKET_SIZE = 1024
 PACKET_NUMBER_SIZE = 4
 
-
 class Server:
     def __init__(self, host, port, storage_directory):
         self.host = host
@@ -42,13 +41,16 @@ class Server:
             if command.startswith('upload'):
                 filename = command.split()[1]
                 print(f"Se va a recibir el archivo {filename}")
+
                 """ protocol = UDPStopAndWait(connection=self.sock, external_host_address=client_address,
                                           message_queue=self.clients[client_address]) """
+                
                 protocol = UDPSACK(connection=self.sock, external_host_address=client_address,
                                           message_queue=self.clients[client_address])
                 file_path = os.path.join(self.storage_directory, filename)
                 protocol.receive_file(file_path)
                 print(f"Archivo guardado en {file_path}")
+
             elif command.startswith('download'):
                 filename = command.split()[1]
                 file_path = os.path.join(self.storage_directory, filename)
@@ -57,11 +59,15 @@ class Server:
                     return
 
                 print(f"Se solicitó el archivo {filename}")
+
                 """ protocol = UDPStopAndWait(connection=self.sock, external_host_address=client_address,
                                           message_queue=self.clients[client_address]) """
+                
                 protocol = UDPSACK(connection=self.sock, external_host_address=client_address,
-                                          message_queue=self.clients[client_address])
+                                   message_queue=self.clients[client_address])
+                
                 protocol.send_file(file_path)
                 print(f"Se envió el archivo {filename} correctamente")
+
         except UnicodeDecodeError:
             print(f"Comando no reconocido: {data}")
