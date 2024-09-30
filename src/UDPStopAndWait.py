@@ -47,7 +47,7 @@ class UDPStopAndWait:
 
                 missing_ack = True
                 while missing_ack:
-                    logger.debug(f"Enviando paquete {packet_number}", f"{self.external_host_address}")
+                    logger.debug(f"Enviando paquete {packet_number} a {self.external_host_address}")
                     # Se arma el struct para que del otro lado no haya que hacer un .decode() para un pdf
                     # no funca (por ejemplo)
                     packet = Packet(packet_number, file_chunk).as_bytes()

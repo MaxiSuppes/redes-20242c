@@ -28,7 +28,9 @@ class Server:
 
         while True:
             expected_packet_size = settings.packet_size() + settings.packet_number_size()
+            logger.debug(f"Expecting packet of size {expected_packet_size}")
             data, client_address = self.sock.recvfrom(expected_packet_size)
+            logger.debug(f"Mensaje recibido {data} desde {client_address}")
             if client_address not in self.clients.keys():
                 logger.debug(f"Nuevo cliente: {client_address}")
                 self.clients[client_address] = queue.Queue()
