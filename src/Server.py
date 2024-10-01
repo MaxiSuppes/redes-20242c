@@ -60,7 +60,7 @@ class Server:
                 logger.info(f"Se solicitó el archivo {filename}")
                 protocol = UDPSelectiveAck(connection=self.sock, external_host_address=client_address,
                                            message_queue=self.clients[client_address])
-                protocol.send_file(file_path)
+                protocol.send_file2(file_path)
                 logger.info(f"Se envió el archivo {filename} correctamente")
         except UnicodeDecodeError:
             logger.error(f"Comando no reconocido: {data}")

@@ -149,33 +149,32 @@ class UDPSelectiveAck:
         ack_thread.join()
 
     def handle_received_packet(self, packet_number, payload, received_packets, file_to_storage, last_packet_received):
-        if packet_number <= last_packet_received:  # Check if the packet has already been received (duplicate)
+        if packet_number <= last_packet_received:  
             logger.debug(f"Duplicate packet {packet_number}, sending ACK anyway.")
 
-        elif packet_number == last_packet_received + 1:  # Check if the packet is the next one in sequence
+        elif packet_number == last_packet_received + 1:  
             logger.debug(f"Packet {packet_number} in sequence. Writing to file.")
             file_to_storage.write(payload)
             last_packet_received += 1
 
-            # Write all subsequent in-sequence packets
             while last_packet_received + 1 in received_packets:
                 last_packet_received += 1
                 file_to_storage.write(received_packets.pop(last_packet_received))
                 logger.debug(f"Packet {last_packet_received} in sequence. Writing to file.")
 
-        else:  # Store the packet if it's out of order
+        else: 
             logger.debug(f"Packet {packet_number} out of order. Not written yet.")
             received_packets[packet_number] = payload
             logger.debug(f"Packet {packet_number} stored, waiting for ACK.")
 
-        return last_packet_received  # Return the updated last packet received
+        return last_packet_received 
 
     def receive_file(self, file_path):
         logger.info(f"Receiving file at {file_path} from {self.external_host_address}")
 
         with open(file_path, 'wb') as file_to_storage:
-            last_packet_received = 0  # Number of the last packet received in order
-            received_packets = {}  # Store out-of-order packets
+            last_packet_received = 0  
+            received_packets = {}  
 
             while True:
                 packet = self.receive_packet()
@@ -189,10 +188,8 @@ class UDPSelectiveAck:
 
                 logger.debug(f"Packet received: {packet_number}")
 
-                # Update the last_packet_received after handling the packet
                 last_packet_received = self.handle_received_packet(packet_number, payload, received_packets, file_to_storage, last_packet_received)
-
-                # Send an ACK for the current packet (even if it's out of order or a duplicate)
+                
                 ack_packet = Packet(packet_number, settings.ack_command().encode()).as_bytes()
                 self.send_message(ack_packet)
                 logger.debug(f"ACK sent for packet {packet_number} to {self.external_host_address}")
