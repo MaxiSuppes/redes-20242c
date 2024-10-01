@@ -14,7 +14,7 @@ class UDPSelectiveAck:
         self.window_size = settings.window_size()  # Tamaño de la ventana
         self.not_acknowledged_packets = {}  # Paquetes enviados pero no confirmados
         self.received_acks = set()  # Lista de acks recibidos
-        self.file_transfer_complete
+        self.file_transfer_complete = False
 
     def receive_packet(self, timeout=None):
         if self.message_queue:
@@ -119,7 +119,6 @@ class UDPSelectiveAck:
         with open(file_path, 'rb') as file_to_send:
             packet_number = 1
             window_size = settings.window_size()
-            self.file_transfer_complete = False
 
             ack_thread = threading.Thread(target=self.wait_for_acks)
             ack_thread.start()
@@ -149,31 +148,34 @@ class UDPSelectiveAck:
 
         ack_thread.join()
 
-    def handle_received_packet(self, packet_number, payload, received_packets, file_to_storage):
-        if packet_number <= last_packet_received: # Verificar si el paquete ya fue recibido (duplicado)
-            logger.debug(f"Paquete duplicado {packet_number}, enviando ACK de todas formas.")
+    def handle_received_packet(self, packet_number, payload, received_packets, file_to_storage, last_packet_received):
+        if packet_number <= last_packet_received:  # Check if the packet has already been received (duplicate)
+            logger.debug(f"Duplicate packet {packet_number}, sending ACK anyway.")
 
-        elif packet_number == last_packet_received + 1: # Verificar si el paquete es el siguiente en la secuencia
-            logger.debug(f"Paquete {packet_number} en secuencia. Escribiendo a archivo.")
+        elif packet_number == last_packet_received + 1:  # Check if the packet is the next one in sequence
+            logger.debug(f"Packet {packet_number} in sequence. Writing to file.")
             file_to_storage.write(payload)
             last_packet_received += 1
 
-            while last_packet_received + 1 in received_packets: # Escribir todos los paquetes subsecuentes que están en orden
+            # Write all subsequent in-sequence packets
+            while last_packet_received + 1 in received_packets:
                 last_packet_received += 1
                 file_to_storage.write(received_packets.pop(last_packet_received))
-                logger.debug(f"Paquete {last_packet_received} en secuencia. Escribiendo a archivo.")
+                logger.debug(f"Packet {last_packet_received} in sequence. Writing to file.")
 
-        else: # Almacenar el paquete si está fuera de orden
-            logger.debug(f"Paquete {packet_number} fuera de orden. No escrito aún.")
+        else:  # Store the packet if it's out of order
+            logger.debug(f"Packet {packet_number} out of order. Not written yet.")
             received_packets[packet_number] = payload
-            logger.debug(f"Paquete {packet_number} almacenado, esperando ACK.")
+            logger.debug(f"Packet {packet_number} stored, waiting for ACK.")
+
+        return last_packet_received  # Return the updated last packet received
 
     def receive_file(self, file_path):
-        logger.info(f"Recibiendo archivo en {file_path} desde {self.external_host_address}")
+        logger.info(f"Receiving file at {file_path} from {self.external_host_address}")
 
         with open(file_path, 'wb') as file_to_storage:
-            last_packet_received = 0  # Número del último paquete recibido en orden
-            received_packets = {}  # Almacena paquetes recibidos fuera de orden
+            last_packet_received = 0  # Number of the last packet received in order
+            received_packets = {}  # Store out-of-order packets
 
             while True:
                 packet = self.receive_packet()
@@ -182,17 +184,17 @@ class UDPSelectiveAck:
                 payload = packet.payload()
 
                 if payload == settings.end_file_command().encode():
-                    logger.debug(f"Señal de fin de archivo recibida, terminando recepción.")
+                    logger.debug(f"End of file signal received, terminating reception.")
                     break
 
-                logger.debug(f"Paquete recibido: {packet_number}")
+                logger.debug(f"Packet received: {packet_number}")
 
-                self.handle_received_packet(packet_number, payload, received_packets, file_to_storage)
+                # Update the last_packet_received after handling the packet
+                last_packet_received = self.handle_received_packet(packet_number, payload, received_packets, file_to_storage, last_packet_received)
 
-                # Enviar un ACK para el paquete actual (aunque esté fuera de orden o duplicado)
+                # Send an ACK for the current packet (even if it's out of order or a duplicate)
                 ack_packet = Packet(packet_number, settings.ack_command().encode()).as_bytes()
                 self.send_message(ack_packet)
-                logger.debug(f"ACK enviado para paquete {packet_number} a {self.external_host_address}")
+                logger.debug(f"ACK sent for packet {packet_number} to {self.external_host_address}")
 
-            logger.info(f"Archivo recibido correctamente en {file_path}")
-
+        logger.info(f"File received successfully at {file_path}")
