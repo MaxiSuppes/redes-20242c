@@ -1,7 +1,10 @@
 import os
 import socket
 
+from src.Logger import logger
+from src.UDPSelectiveACK import UDPSelectiveAck
 from src.UDPStopAndWait import UDPStopAndWait
+from src.settings import settings
 
 
 class Uploader:
@@ -13,10 +16,11 @@ class Uploader:
     def upload(self, source_directory, filename):
         file_path = os.path.join(source_directory, filename)
         if not os.path.exists(file_path):
-            print(f"Archivo {filename} no encontrado")
+            logger.info(f"Archivo {filename} no encontrado")
             return
 
-        protocol = UDPStopAndWait(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
-        protocol.send_message(f"upload {filename}".encode())
+        protocol = UDPSelectiveAck(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
+        logger.debug(f"El comando es {settings.upload_command()} {filename}")
+        protocol.send_message(f"{settings.upload_command()} {filename}".encode())
         protocol.send_file(file_path)
-        print(f"Se envió el archivo {filename} correctamente")
+        logger.info(f"Se envió el archivo {filename} correctamente")
