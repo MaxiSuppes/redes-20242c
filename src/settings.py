@@ -10,6 +10,7 @@ class Settings:
         self._packet_size = int(os.getenv('PACKET_SIZE'))
         self._packet_number_size = int(os.getenv('PACKET_NUMBER_SIZE'))
         self._timeout = int(os.getenv('TIMEOUT'))
+        self._window_size = int(os.getenv('SACK_WINDOW_SIZE'))
         self._server_storage = os.getenv('SERVER_STORAGE')
         self._server_example_file = os.getenv('SERVER_EXAMPLE_FILE')
         self._download_directory = os.getenv('DOWNLOAD_DIRECTORY')
@@ -51,6 +52,9 @@ class Settings:
 
     def end_file_command(self) -> str:
         return self._end_file_command
+
+    def window_size(self) -> int:
+        return self._window_size
 
 
 settings = Settings()

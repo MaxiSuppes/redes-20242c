@@ -4,7 +4,9 @@ from src.Packet import Packet
 
 PACKET_SIZE = 1024
 TIMEOUT = 5
-WINDOW_SIZE = 5  
+WINDOW_SIZE = 5
+
+
 class UDPSACK:
     def __init__(self, connection, external_host_address, message_queue=None):
         self.external_host_address = external_host_address  # (ip, port)

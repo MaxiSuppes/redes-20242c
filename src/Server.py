@@ -4,6 +4,7 @@ import socket
 import threading
 
 from src.Logger import logger
+from src.UDPSelectiveACK import UDPSelectiveAck
 from src.UDPStopAndWait import UDPStopAndWait
 from src.settings import settings
 
@@ -28,15 +29,12 @@ class Server:
 
         while True:
             expected_packet_size = settings.packet_size() + settings.packet_number_size()
-            logger.debug(f"Expecting packet of size {expected_packet_size}")
             data, client_address = self.sock.recvfrom(expected_packet_size)
-            logger.debug(f"Mensaje recibido {data} desde {client_address}")
             if client_address not in self.clients.keys():
                 logger.debug(f"Nuevo cliente: {client_address}")
                 self.clients[client_address] = queue.Queue()
                 threading.Thread(target=self.handle_client, args=(client_address,)).start()
 
-            logger.debug(f"Guardando {data} desde {client_address}")
             self.clients[client_address].put(data)
 
     def handle_client(self, client_address):
@@ -47,8 +45,8 @@ class Server:
             if command.startswith(settings.upload_command()):
                 filename = command.split()[1]
                 logger.info(f"Se va a recibir el archivo {filename}")
-                protocol = UDPStopAndWait(connection=self.sock, external_host_address=client_address,
-                                          message_queue=self.clients[client_address])
+                protocol = UDPSelectiveAck(connection=self.sock, external_host_address=client_address,
+                                           message_queue=self.clients[client_address])
                 file_path = os.path.join(self.storage_directory, filename)
                 protocol.receive_file(file_path)
                 logger.info(f"Archivo guardado en {file_path}")
@@ -60,8 +58,8 @@ class Server:
                     return
 
                 logger.info(f"Se solicitó el archivo {filename}")
-                protocol = UDPStopAndWait(connection=self.sock, external_host_address=client_address,
-                                          message_queue=self.clients[client_address])
+                protocol = UDPSelectiveAck(connection=self.sock, external_host_address=client_address,
+                                           message_queue=self.clients[client_address])
                 protocol.send_file(file_path)
                 logger.info(f"Se envió el archivo {filename} correctamente")
         except UnicodeDecodeError:
