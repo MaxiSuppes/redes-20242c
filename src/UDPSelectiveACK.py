@@ -14,7 +14,6 @@ class UDPSelectiveAck:
         self.message_queue = message_queue
         self.window_size = settings.window_size()
         self.not_acknowledged_packets = {}
-        self.received_acks = set()
         self.ack_thread = None
         self.ack_stop_event = threading.Event()
         self.lock = threading.Lock()
@@ -44,11 +43,11 @@ class UDPSelectiveAck:
             try:
                 ack_packet = self.receive_packet(timeout=settings.timeout())
                 ack_number = ack_packet.sequence_number()
-                logger.debug(f"ACK recibido {ack_number}")
                 with self.lock:
                     if ack_number in self.not_acknowledged_packets.keys():
                         del self.not_acknowledged_packets[ack_number]
-                        self.received_acks.add(ack_number)
+
+                    logger.debug(f"Se recibió el ack {ack_number}. Quedan sin ack {self.not_acknowledged_packets.keys()}")
             except self.timeout_error_class():
                 continue  # Ignoro el timeout
 
@@ -61,28 +60,26 @@ class UDPSelectiveAck:
             packet_number = 1
 
             while True:
-                # Enviar paquetes hasta llenar la ventana de transmisión
+                # Envia paquetes hasta llenar la ventana de transmisión
                 while len(self.not_acknowledged_packets.keys()) < self.window_size:
                     file_chunk = file_to_send.read(settings.packet_size())
                     if not file_chunk:
                         logger.debug(f"Fin de archivo")
                         break
 
-                    # Crear y enviar el paquete
                     packet = Packet(packet_number, file_chunk).as_bytes()
                     self.send_message(packet)
 
-                    # Añadirlo a la lista de no confirmados
                     with self.lock:
                         self.not_acknowledged_packets[packet_number] = packet
 
                     packet_number += 1
 
-                logger.debug(f"self.not_acknowledged_packets {len(self.not_acknowledged_packets)}")
+                logger.debug(f"Acks faltantes despues de la ventana: {self.not_acknowledged_packets.keys()}")
                 with self.lock:
-                    for not_acknowledged_packet_number, not_acknowledged_packet in list(
-                            self.not_acknowledged_packets.items()):
-                        self.send_message(not_acknowledged_packet)
+                    for not_ack_packet_number, not_ack_packet in list(self.not_acknowledged_packets.items()):
+                        logger.debug(f"Reenviando paquete {not_ack_packet_number}")
+                        self.send_message(not_ack_packet)
 
                 # Romper si ya no hay más paquetes que enviar o confirmar
                 if len(self.not_acknowledged_packets) == 0 and not file_chunk:
@@ -111,12 +108,8 @@ class UDPSelectiveAck:
                     logger.debug(f"Señal de fin de archivo recibida, terminando recepción.")
                     break
 
-                logger.debug(f"Paquete recibido: {packet_number}")
-
-                # Verificar si el paquete ya fue recibido (duplicado)
-                if packet_number <= last_packet_received:
-                    logger.debug(f"Paquete número {packet_number}. Ya fue recibido. Enviando ACK.")
-                else:
+                # Ignoro los packets duplicados
+                if packet_number > last_packet_received:
                     received_packets[packet_number] = payload
 
                     # Verificar si el paquete es el siguiente en la secuencia
@@ -133,7 +126,9 @@ class UDPSelectiveAck:
                     else:
                         logger.debug(f"Paquete número {packet_number}. Fuera de orden. Guardando para después.")
 
+
                 # Enviar un ACK para el paquete actual (aunque esté fuera de orden o duplicado)
+                logger.debug(f"Enviando ACK para paquete {packet_number}")
                 ack_packet = Packet(packet_number, settings.ack_command().encode()).as_bytes()
                 self.send_message(ack_packet)
 
