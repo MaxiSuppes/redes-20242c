@@ -15,6 +15,7 @@ class Settings:
         self._server_example_file = os.getenv('SERVER_EXAMPLE_FILE')
         self._download_directory = os.getenv('DOWNLOAD_DIRECTORY')
         self._client_example_file = os.getenv('CLIENT_EXAMPLE_FILE')
+        self._network_loss_percentage = int(os.getenv('NETWORK_LOSS_PERCENTAGE'))
         self._ack_command = "ACK"
         self._upload_command = "upload"
         self._download_command = "download"
@@ -55,6 +56,9 @@ class Settings:
 
     def window_size(self) -> int:
         return self._window_size
+
+    def network_loss_percentage(self) -> float:
+        return self._network_loss_percentage
 
 
 settings = Settings()

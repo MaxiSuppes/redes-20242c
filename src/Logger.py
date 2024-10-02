@@ -1,4 +1,5 @@
 import logging
+import time
 
 LOGGER_NAME = 'Logger'
 
@@ -15,6 +16,6 @@ def setup_logging(increase_verbosity, decrease_verbosity):
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[logging.StreamHandler()]
+    handlers=[logging.StreamHandler(), logging.FileHandler(f'{LOGGER_NAME}-{time.time()}.log')]
 )
 logger = logging.getLogger(LOGGER_NAME)
