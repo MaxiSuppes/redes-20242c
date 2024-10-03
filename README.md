@@ -27,7 +27,8 @@ pip install -r requirements.txt
 ```
 
 Copiar el contenido del archivo `.env.example` a un nuevo archivo llamado `.env` y modificar las variables de entorno
-según sea necesario.
+según sea necesario. Por ejemplo, para configurar el protocolo de transferencia se puede setear la variable 
+PROTOCOL_NAME en **"StopAndWait"** o **"SelectiveACK"**.
 
 ## Ejecución
 ### Levantar la red
