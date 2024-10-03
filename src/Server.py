@@ -63,4 +63,5 @@ class Server:
                 protocol.send_file(file_path)
                 logger.info(f"Se envió el archivo {filename} correctamente")
         except UnicodeDecodeError:
-            logger.error(f"Comando no reconocido: {data}")
+            logger.error(f"Hubo un error al gestionar la solicitud. Intentar nuevamente")
+            return
