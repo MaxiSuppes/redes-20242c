@@ -16,6 +16,9 @@ class Settings:
         self._download_directory = os.getenv('DOWNLOAD_DIRECTORY')
         self._client_example_file = os.getenv('CLIENT_EXAMPLE_FILE')
         self._network_loss_percentage = int(os.getenv('NETWORK_LOSS_PERCENTAGE'))
+        self._max_warnings = int(os.getenv('MAX_WARNINGS'))
+        self._max_consecutives_retries = int(os.getenv('MAX_CONSECUTIVE_RETRIES'))
+        self._protocol_name = os.getenv('PROTOCOL_NAME')
         self._ack_command = "ACK"
         self._upload_command = "upload"
         self._download_command = "download"
@@ -67,10 +70,21 @@ class Settings:
         return "SACK"
 
     def max_warnings(self) -> int:
-        return 3
+        return self._max_warnings
 
     def max_consecutives_retries(self) -> int:
-        return 10
+        return self._max_consecutives_retries
+
+    def protocol_name(self) -> str:
+        return self._protocol_name
+
+    def protocol(self):
+        from src.UDPStopAndWait import UDPStopAndWait
+        if self.protocol_name() == "StopAndWait":
+            return UDPStopAndWait
+        elif self.protocol_name() == "SelectiveACK":
+            from src.UDPSelectiveACK import UDPSelectiveAck
+            return UDPSelectiveAck
 
 
 settings = Settings()

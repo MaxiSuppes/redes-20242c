@@ -4,8 +4,6 @@ import socket
 import threading
 
 from src.Logger import logger
-from src.UDPSelectiveACK import UDPSelectiveAck
-from src.UDPStopAndWait import UDPStopAndWait
 from src.settings import settings
 
 
@@ -45,8 +43,9 @@ class Server:
             if command.startswith(settings.upload_command()):
                 filename = command.split()[1]
                 logger.info(f"Se va a recibir el archivo {filename}")
-                protocol = UDPSelectiveAck(connection=self.sock, external_host_address=client_address,
-                                           message_queue=self.clients[client_address])
+                protocol = settings.protocol()(connection=self.sock, external_host_address=client_address,
+                                               message_queue=self.clients[client_address])
+                logger.info(f"Usando el protocolo {settings.protocol_name()}")
                 file_path = os.path.join(self.storage_directory, filename)
                 protocol.receive_file(file_path)
                 logger.info(f"Archivo guardado en {file_path}")
@@ -58,8 +57,9 @@ class Server:
                     return
 
                 logger.info(f"Se solicitó el archivo {filename}")
-                protocol = UDPSelectiveAck(connection=self.sock, external_host_address=client_address,
-                                           message_queue=self.clients[client_address])
+                protocol = settings.protocol()(connection=self.sock, external_host_address=client_address,
+                                               message_queue=self.clients[client_address])
+                logger.info(f"Usando el protocolo {settings.protocol_name()}")
                 protocol.send_file(file_path)
                 logger.info(f"Se envió el archivo {filename} correctamente")
         except UnicodeDecodeError:

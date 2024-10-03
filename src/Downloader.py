@@ -2,8 +2,6 @@ import os
 import socket
 
 from src.Logger import logger
-from src.UDPSelectiveACK import UDPSelectiveAck
-from src.UDPStopAndWait import UDPStopAndWait
 from src.settings import settings
 
 
@@ -15,9 +13,10 @@ class Downloader:
         # TODO: Podríamos tener como variable de configuración el protocolo (StopAndWait, SelectiveRepeat)
 
     def download(self, download_directory, filename):
-        protocol = UDPSelectiveAck(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
+        protocol = settings.protocol()(connection=self.sock, external_host_address=(self.server_ip, self.server_port))
 
         logger.info(f"Enviando código de descarga {settings.download_command()}")
         protocol.send_message(f"{settings.download_command()} {filename}".encode())
+        logger.info(f"Usando el protocolo {settings.protocol_name()} para {settings.download_command()} de {filename}")
         file_path = os.path.join(download_directory, filename)
         protocol.receive_file(file_path)
