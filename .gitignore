@@ -1,3 +1,11 @@
 /.idea/
 /venv/
 .env
+/oflops/
+/src/__pycache__/
+/client_storage/
+/server_storage/
+/mininet/
+/oftest/
+/openflow/
+/pox/

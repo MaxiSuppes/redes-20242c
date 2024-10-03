@@ -15,10 +15,10 @@ def network():
 
     switch = net.addSwitch('switch', dpid='0000000000000001')  # El Datapath ID (dpid) es como la IP del switch
 
-    net.addLink(server, switch)
-    net.addLink(client_1, switch)
-    net.addLink(client_2, switch)
-    net.addLink(client_3, switch)
+    net.addLink(server, switch, loss=10)
+    net.addLink(client_1, switch, loss=10)
+    net.addLink(client_2, switch, loss=10)
+    net.addLink(client_3, switch, loss=10)
 
     net.start()
     net.pingAll()
