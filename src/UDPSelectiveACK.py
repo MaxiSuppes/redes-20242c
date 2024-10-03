@@ -46,8 +46,12 @@ class UDPSelectiveAck:
                 expected_packet = ack_number + 1
                 if ack_packet.is_an_ack():
                     with self.ack_thread_lock:
-                        del self.not_acknowledged_packets[ack_number]  # El anterior al que me pide lo recibio si o si
-                        logger.debug(f"Llegó ACK-{ack_number} quedó esto: {self.not_acknowledged_packets.keys()}")
+                        try:
+                            del self.not_acknowledged_packets[ack_number]  # El anterior al que me pide lo recibio si o si
+                            logger.debug(f"Llegó ACK-{ack_number} quedó esto: {self.not_acknowledged_packets.keys()}")
+                        except KeyError as e:
+                            print(f"Error: {e}")
+                            print(self.not_acknowledged_packets.keys())
                 elif ack_packet.is_an_sack():
                     left, right = ack_packet.sack_range()
                     for sack_number in range(left, right):
@@ -83,9 +87,9 @@ class UDPSelectiveAck:
                         break
 
                     packet = Packet(packet_number, file_chunk).as_bytes()
-                    self.send_message(packet)
 
                     with self.ack_thread_lock:
+                        self.send_message(packet)
                         self.not_acknowledged_packets[packet_number] = packet
 
                     packet_number += 1
