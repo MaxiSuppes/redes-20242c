@@ -1,3 +1,0 @@
-2024-10-03 10:30:51,411 - INFO - Servidor iniciado en 127.0.0.1:3000
-2024-10-03 10:30:55,335 - INFO - Se solicitó el archivo enunciado.pdf
-2024-10-03 10:30:55,335 - INFO - Enviando archivo ./server_storage/enunciado.pdf a ('127.0.0.1', 49453)

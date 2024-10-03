@@ -1,0 +1,130 @@
+2024-10-03 12:30:00,569 - INFO - Servidor iniciado en 10.0.0.1:12345
+2024-10-03 12:30:02,481 - DEBUG - Nuevo cliente: ('10.0.0.2', 45865)
+2024-10-03 12:30:02,482 - INFO - Se va a recibir el archivo enunciado.pdf
+2024-10-03 12:30:02,482 - INFO - Recibiendo archivo en server_storage/enunciado.pdf desde ('10.0.0.2', 45865)
+2024-10-03 12:30:02,482 - DEBUG - Ultimo recibido: 1
+2024-10-03 12:30:02,482 - INFO - Es duplicado 1
+2024-10-03 12:30:02,482 - DEBUG - Ultimo recibido: 2
+2024-10-03 12:30:02,482 - INFO - Es duplicado 2
+2024-10-03 12:30:02,482 - DEBUG - Ultimo recibido: 3
+2024-10-03 12:30:02,482 - INFO - Es duplicado 3
+2024-10-03 12:30:02,482 - DEBUG - Ultimo recibido: 4
+2024-10-03 12:30:02,482 - INFO - Es duplicado 4
+2024-10-03 12:30:02,482 - DEBUG - Ultimo recibido: 5
+2024-10-03 12:30:02,482 - INFO - Es duplicado 5
+2024-10-03 12:30:02,482 - DEBUG - Ultimo recibido: 6
+2024-10-03 12:30:02,482 - INFO - Es duplicado 6
+2024-10-03 12:30:02,482 - DEBUG - Ultimo recibido: 7
+2024-10-03 12:30:02,482 - INFO - Es duplicado 7
+2024-10-03 12:30:02,483 - DEBUG - Ultimo recibido: 8
+2024-10-03 12:30:02,483 - INFO - Es duplicado 8
+2024-10-03 12:30:02,483 - DEBUG - Ultimo recibido: 9
+2024-10-03 12:30:02,483 - INFO - Es duplicado 9
+2024-10-03 12:30:02,483 - DEBUG - Ultimo recibido: 10
+2024-10-03 12:30:02,483 - INFO - Es duplicado 10
+2024-10-03 12:30:02,483 - DEBUG - Ultimo recibido: 11
+2024-10-03 12:30:02,483 - INFO - Es duplicado 11
+2024-10-03 12:30:02,483 - DEBUG - Ultimo recibido: 12
+2024-10-03 12:30:02,483 - INFO - Es duplicado 12
+2024-10-03 12:30:02,483 - DEBUG - Ultimo recibido: 13
+2024-10-03 12:30:02,483 - INFO - Es duplicado 13
+2024-10-03 12:30:02,483 - DEBUG - Ultimo recibido: 14
+2024-10-03 12:30:02,484 - INFO - Es duplicado 14
+2024-10-03 12:30:02,484 - DEBUG - Ultimo recibido: 15
+2024-10-03 12:30:02,484 - INFO - Es duplicado 15
+2024-10-03 12:30:02,484 - DEBUG - Ultimo recibido: 16
+2024-10-03 12:30:02,484 - INFO - Es duplicado 16
+2024-10-03 12:30:02,484 - DEBUG - Ultimo recibido: 17
+2024-10-03 12:30:02,484 - INFO - Es duplicado 17
+2024-10-03 12:30:02,484 - DEBUG - Ultimo recibido: 18
+2024-10-03 12:30:02,484 - INFO - Es duplicado 18
+2024-10-03 12:30:02,484 - DEBUG - Ultimo recibido: 19
+2024-10-03 12:30:02,484 - INFO - Es duplicado 19
+2024-10-03 12:30:02,484 - DEBUG - Ultimo recibido: 20
+2024-10-03 12:30:02,484 - INFO - Es duplicado 20
+2024-10-03 12:30:02,484 - DEBUG - Ultimo recibido: 21
+2024-10-03 12:30:02,484 - INFO - Es duplicado 21
+2024-10-03 12:30:02,484 - DEBUG - Ultimo recibido: 22
+2024-10-03 12:30:02,484 - INFO - Es duplicado 22
+2024-10-03 12:30:02,485 - DEBUG - Ultimo recibido: 23
+2024-10-03 12:30:02,485 - INFO - Es duplicado 23
+2024-10-03 12:30:02,485 - DEBUG - Ultimo recibido: 24
+2024-10-03 12:30:02,485 - INFO - Es duplicado 24
+2024-10-03 12:30:02,485 - DEBUG - Ultimo recibido: 25
+2024-10-03 12:30:02,485 - INFO - Es duplicado 25
+2024-10-03 12:30:02,486 - DEBUG - Ultimo recibido: 26
+2024-10-03 12:30:02,486 - INFO - Es duplicado 26
+2024-10-03 12:30:02,486 - DEBUG - Ultimo recibido: 27
+2024-10-03 12:30:02,486 - INFO - Es duplicado 27
+2024-10-03 12:30:02,486 - DEBUG - Longitud received packets: 1
+2024-10-03 12:30:02,486 - DEBUG - Range start: 29
+2024-10-03 12:30:02,486 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-29
+2024-10-03 12:30:02,487 - INFO - Es duplicado 29
+2024-10-03 12:30:02,487 - DEBUG - Longitud received packets: 2
+2024-10-03 12:30:02,487 - DEBUG - Range start: 29
+2024-10-03 12:30:02,487 - DEBUG - packet number: [29, 30]
+2024-10-03 12:30:02,487 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-30
+2024-10-03 12:30:02,487 - INFO - Es duplicado 30
+2024-10-03 12:30:02,487 - DEBUG - Longitud received packets: 3
+2024-10-03 12:30:02,487 - DEBUG - Range start: 29
+2024-10-03 12:30:02,487 - DEBUG - packet number: [29, 30, 31]
+2024-10-03 12:30:02,487 - DEBUG - packet number: [29, 30, 31]
+2024-10-03 12:30:02,487 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-31
+2024-10-03 12:30:02,487 - INFO - Es duplicado 31
+2024-10-03 12:30:02,487 - DEBUG - Longitud received packets: 4
+2024-10-03 12:30:02,487 - DEBUG - Range start: 29
+2024-10-03 12:30:02,487 - DEBUG - packet number: [29, 30, 31, 32]
+2024-10-03 12:30:02,487 - DEBUG - packet number: [29, 30, 31, 32]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32]
+2024-10-03 12:30:02,488 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-32
+2024-10-03 12:30:02,488 - INFO - Es duplicado 32
+2024-10-03 12:30:02,488 - DEBUG - Longitud received packets: 5
+2024-10-03 12:30:02,488 - DEBUG - Range start: 29
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33]
+2024-10-03 12:30:02,488 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-33
+2024-10-03 12:30:02,488 - INFO - Es duplicado 33
+2024-10-03 12:30:02,488 - DEBUG - Longitud received packets: 6
+2024-10-03 12:30:02,488 - DEBUG - Range start: 29
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34]
+2024-10-03 12:30:02,488 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-34
+2024-10-03 12:30:02,488 - INFO - Es duplicado 34
+2024-10-03 12:30:02,488 - DEBUG - Longitud received packets: 7
+2024-10-03 12:30:02,488 - DEBUG - Range start: 29
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35]
+2024-10-03 12:30:02,488 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35]
+2024-10-03 12:30:02,488 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-35
+2024-10-03 12:30:02,489 - INFO - Es duplicado 35
+2024-10-03 12:30:02,489 - DEBUG - Longitud received packets: 8
+2024-10-03 12:30:02,489 - DEBUG - Range start: 29
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36]
+2024-10-03 12:30:02,489 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-36
+2024-10-03 12:30:02,489 - INFO - Es duplicado 36
+2024-10-03 12:30:02,489 - DEBUG - Longitud received packets: 9
+2024-10-03 12:30:02,489 - DEBUG - Range start: 29
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36, 37]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36, 37]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36, 37]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36, 37]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36, 37]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36, 37]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36, 37]
+2024-10-03 12:30:02,489 - DEBUG - packet number: [29, 30, 31, 32, 33, 34, 35, 36, 37]
+2024-10-03 12:30:02,489 - DEBUG - Recibi algo malo. Espero 28 pero tengo 29-37
+2024-10-03 12:30:02,489 - INFO - Es duplicado 37

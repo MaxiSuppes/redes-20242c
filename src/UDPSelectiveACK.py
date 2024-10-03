@@ -53,17 +53,19 @@ class UDPSelectiveAck:
                             print(f"Error: {e}")
                             print(self.not_acknowledged_packets.keys())
                 elif ack_packet.is_an_sack():
+                    logger.debug(f"Recibido SACK-{ack_packet.sack_range()}")
                     left, right = ack_packet.sack_range()
-                    for sack_number in range(left, right):
+                    logger.debug(f"left: {left}, right: {right}")
+                    for sack_number in range(int(left), int(right)):
+                        logger.debug(f"Revisando SACK-{sack_number}")
                         if sack_number in self.not_acknowledged_packets.keys():
-                            with self.ack_thread_lock:
-                                del self.not_acknowledged_packets[sack_number]
-                                logger.debug(f"Llegó SACK-{left, right} y quedó esto: {self.not_acknowledged_packets.keys()}")
+                            del self.not_acknowledged_packets[sack_number]
+                            logger.debug(f"Llegó SACK-{left, right} y quedó esto: {self.not_acknowledged_packets.keys()}")
 
-                    for sack_number in range(expected_packet, left):
+                    for sack_number in range(expected_packet, int(left)):
                         packet = self.not_acknowledged_packets[sack_number]
                         packet_number = sack_number
-                        logger.debug(f"Reenviadno paquete {packet_number}")
+                        logger.debug(f"Reenviando paquete {packet_number}")
                         self.send_message(Packet(packet_number, packet).as_bytes())
             except self.timeout_error_class():
                 continue  # Ignoro el timeout
@@ -79,6 +81,7 @@ class UDPSelectiveAck:
 
             while True:
                 # Envia paquetes hasta llenar la ventana de transmisión
+                logger.debug(f"len not ack: {len(self.not_acknowledged_packets.keys())}")
                 while len(self.not_acknowledged_packets.keys()) < self.window_size:
                     file_chunk = file_to_send.read(settings.packet_size())
                     if not file_chunk:
@@ -146,8 +149,12 @@ class UDPSelectiveAck:
                             range_start += 1
 
                         range_end = range_start
-                        for i in range(range_start + 1, len(received_packets)):
+                        logger.debug(f"Longitud received packets: {len(received_packets)}")
+                        logger.debug(f"Range start: {range_start}")
+                        for i in range(range_start + 1, range_start + len(received_packets)):
+                            
                             if i in received_packets_numbers:
+                                logger.debug(f"packet number: {received_packets_numbers}")
                                 range_end += 1
                             else:
                                 break
