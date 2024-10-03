@@ -60,5 +60,14 @@ class Settings:
     def network_loss_percentage(self) -> float:
         return self._network_loss_percentage
 
+    def sack_command(self, ranges=None) -> str:
+        if ranges:
+            return f"SACK {', '.join(ranges)}"
+
+        return "SACK"
+
+    def max_warnings(self) -> int:
+        return 3
+
 
 settings = Settings()

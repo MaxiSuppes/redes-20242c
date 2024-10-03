@@ -1,5 +1,7 @@
 import struct
 
+from src.settings import settings
+
 
 class Packet:
     def __init__(self, sequence_number: int, payload: bytes) -> None:
@@ -9,6 +11,13 @@ class Packet:
     def sequence_number(self) -> int:
         return self._sequence_number
 
+    def sack_string_ranges(self):
+        # SACK 2-3, 4-6, 8-10 -> [2-3, 4-6, 8-10]
+        if self.decoded_payload() == settings.sack_command():
+            return []
+        string_ranges = self.decoded_payload().split("SACK ")[1]
+        return string_ranges.split(", ")
+
     def payload(self) -> bytes:
         return self._payload
 
@@ -16,7 +25,10 @@ class Packet:
         return self._payload.decode()
 
     def is_an_ack(self):
-        return self.decoded_payload() == "ACK"
+        return self.decoded_payload() == settings.ack_command()
+
+    def is_a_sack(self):
+        return self.decoded_payload().startswith(settings.sack_command())
 
     def is_valid_ack(self, sequence_number: int) -> bool:
         return self.is_an_ack() and self.sequence_number() == sequence_number
