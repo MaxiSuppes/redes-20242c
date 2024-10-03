@@ -47,7 +47,8 @@ class UDPSelectiveAck:
                 if ack_packet.is_an_ack():
                     with self.ack_thread_lock:
                         try:
-                            del self.not_acknowledged_packets[ack_number]  # El anterior al que me pide lo recibio si o si
+                            for i in self.not_acknowledged_packets.keys()[:ack_number + 1]:
+                                del self.not_acknowledged_packets[i]  # El anterior al que me pide lo recibio si o si
                             logger.debug(f"Llegó ACK-{ack_number} quedó esto: {self.not_acknowledged_packets.keys()}")
                         except KeyError as e:
                             print(f"Error: {e}")
