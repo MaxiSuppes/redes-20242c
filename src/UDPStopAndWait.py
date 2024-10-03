@@ -67,6 +67,7 @@ class UDPStopAndWait:
         logger.debug(f"Enviando end")
         packet = Packet(packet_number + 1, settings.end_file_command().encode()).as_bytes()
         self.send_message(packet)
+        logger.debug(f"Archivo enviado correctamente")
 
     def receive_file(self, file_path):
         with open(file_path, 'wb') as file_to_storage:
@@ -88,3 +89,4 @@ class UDPStopAndWait:
                 packet = Packet(packet_number, settings.ack_command().encode()).as_bytes()
                 self.send_message(packet)
 
+        logger.debug(f"Archivo guardado correctamente")
