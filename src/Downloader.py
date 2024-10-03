@@ -21,4 +21,3 @@ class Downloader:
         protocol.send_message(f"{settings.download_command()} {filename}".encode())
         file_path = os.path.join(download_directory, filename)
         protocol.receive_file(file_path)
-        logger.info(f"Archivo guardado en {file_path}")

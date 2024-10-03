@@ -17,6 +17,7 @@ class UDPSelectiveAck:
         self.ack_thread = None
         self.ack_stop_event = threading.Event()
         self.lock = threading.Lock()
+        self.consecutive_retries_count = 0
         self.warnings = 0
 
     def receive_packet(self, timeout=None):
@@ -43,6 +44,8 @@ class UDPSelectiveAck:
         while not self.ack_stop_event.is_set():
             try:
                 sack_packet = self.receive_packet(timeout=settings.timeout())
+                with self.lock:
+                    self.consecutive_retries_count = 0
                 logger.debug(f"Recibido ack {sack_packet.sequence_number()} con payload {sack_packet.payload()}")
                 ack_number = sack_packet.sequence_number()
 
@@ -98,7 +101,13 @@ class UDPSelectiveAck:
 
                 logger.debug(f"Acks faltantes despues de la ventana: {self.not_acknowledged_packets.keys()}")
                 with self.lock:
+                    if self.consecutive_retries_count >= settings.max_consecutives_retries():
+                        logger.error(f"Se superó el límite de reintentos. Abortando transmisión.")
+                        self.stop_ack_thread()
+                        return
+
                     if self.warnings >= settings.max_warnings() or end_of_file:
+                        self.consecutive_retries_count += 1
                         self.warnings = 0
                         logger.debug(f"Se superó el límite de advertencias. Reenviando todos los paquetes.")
                         for not_ack_packet_number, not_ack_packet in list(self.not_acknowledged_packets.items()):
@@ -110,10 +119,11 @@ class UDPSelectiveAck:
                     break
 
         # Enviar señal de fin de archivo
-        logger.debug(f"Enviando señal de fin de archivo")
+        logger.debug(f"Enviando señal de fin de archivo {packet_number} y {settings.end_file_command().encode()}")
         packet = Packet(packet_number, settings.end_file_command().encode()).as_bytes()
         self.send_message(packet)
         self.stop_ack_thread()
+        logger.debug(f"Archivo enviado correctamente a {self.external_host_address}")
 
     def receive_file(self, file_path):
         logger.info(f"Recibiendo archivo en {file_path} desde {self.external_host_address}")
@@ -121,58 +131,72 @@ class UDPSelectiveAck:
         with open(file_path, 'wb') as file_to_storage:
             last_packet_received = -1
             received_packets = {}
+            consecutive_retries_count = 0
 
             while True:
-                packet = self.receive_packet()
+                try:
+                    packet = self.receive_packet(timeout=settings.timeout())
 
-                packet_number = packet.sequence_number()
-                logger.debug(f"Paquete número {packet_number} recibido")
-                payload = packet.payload()
+                    packet_number = packet.sequence_number()
+                    logger.debug(f"Paquete número {packet_number} recibido")
+                    payload = packet.payload()
 
-                if payload == settings.end_file_command().encode():
-                    logger.debug(f"Señal de fin de archivo recibida, terminando recepción.")
-                    break
+                    if payload == settings.end_file_command().encode():
+                        logger.debug(f"Señal de fin de archivo recibida, terminando recepción.")
+                        break
 
-                # Ignoro los packets duplicados
-                if packet_number > last_packet_received:
-                    received_packets[packet_number] = payload
+                    # Ignoro los packets duplicados
+                    if packet_number > last_packet_received:
+                        received_packets[packet_number] = payload
 
-                    # Verificar si el paquete es el siguiente en la secuencia
-                    if packet_number == last_packet_received + 1:
-                        logger.debug(f"Paquete número {packet_number}. Escribiendo a archivo.")
-                        file_to_storage.write(payload)
-                        last_packet_received = packet_number
+                        # Verificar si el paquete es el siguiente en la secuencia
+                        if packet_number == last_packet_received + 1:
+                            logger.debug(f"Paquete número {packet_number}. Escribiendo a archivo.")
+                            file_to_storage.write(payload)
+                            last_packet_received = packet_number
 
-                        # Escribir todos los paquetes subsecuentes que están en orden
-                        while last_packet_received + 1 in received_packets.keys():
-                            last_packet_received += 1
-                            logger.debug(f"Paquete subsecuente número {last_packet_received} Escribiendo a archivo.")
-                            file_to_storage.write(received_packets.pop(last_packet_received))
+                            # Escribir todos los paquetes subsecuentes que están en orden
+                            while last_packet_received + 1 in received_packets.keys():
+                                last_packet_received += 1
+                                logger.debug(f"Paquete subsecuente número {last_packet_received} Escribiendo a archivo.")
+                                file_to_storage.write(received_packets.pop(last_packet_received))
 
-                        logger.debug(f"Enviando ack {last_packet_received + 1}")
+                            logger.debug(f"Enviando ack {last_packet_received + 1}")
+                            sack_packet = Packet(last_packet_received + 1, settings.sack_command().encode()).as_bytes()
+                            self.send_message(sack_packet)
+                        else:
+                            receive_packets_numbers = list(received_packets.keys())
+                            receive_packets_numbers.sort()
+                            index_of_current_packet = receive_packets_numbers.index(packet_number)
+                            ranges = []
+                            i = index_of_current_packet
+                            range_left = receive_packets_numbers[i]
+                            while i < len(receive_packets_numbers):
+                                range_right = receive_packets_numbers[i] + 1
+
+                                if range_right not in received_packets:
+                                    ranges.append(f"{range_left}-{range_right}")
+                                    if i == len(receive_packets_numbers) - 1:
+                                        break
+                                    range_left = receive_packets_numbers[i + 1]
+
+                                i += 1
+
+                            logger.debug(f"Enviando ack {last_packet_received + 1} con {settings.sack_command(ranges).encode()}.")
+                            sack_packet = Packet(last_packet_received + 1, settings.sack_command(ranges).encode()).as_bytes()
+                            self.send_message(sack_packet)
+                    else:
+                        logger.debug(f"Paquete número {packet_number} ya recibido, enviando ack {last_packet_received + 1}")
                         sack_packet = Packet(last_packet_received + 1, settings.sack_command().encode()).as_bytes()
                         self.send_message(sack_packet)
-                    else:
-                        receive_packets_numbers = list(received_packets.keys())
-                        receive_packets_numbers.sort()
-                        index_of_current_packet = receive_packets_numbers.index(packet_number)
-                        ranges = []
-                        i = index_of_current_packet
-                        range_left = receive_packets_numbers[i]
-                        while i < len(receive_packets_numbers):
-                            range_right = receive_packets_numbers[i] + 1
-
-                            if range_right not in received_packets:
-                                ranges.append(f"{range_left}-{range_right}")
-                                if i == len(receive_packets_numbers) - 1:
-                                    break
-                                range_left = receive_packets_numbers[i + 1]
-
-                            i += 1
-
-                        logger.debug(f"Enviando ack {last_packet_received + 1} con {settings.sack_command(ranges).encode()}.")
-                        sack_packet = Packet(last_packet_received + 1, settings.sack_command(ranges).encode()).as_bytes()
-                        self.send_message(sack_packet)
+                except self.timeout_error_class():
+                    consecutive_retries_count += 1
+                    if consecutive_retries_count >= settings.max_consecutives_retries():
+                        logger.error("Se superó el límite de reintentos. Terminando recepción.")
+                        return
+                    if last_packet_received == -1:
+                        logger.error("No se pudo iniciar la conexión con el servidor. Volvé a intentarlo.")
+                        return
 
             logger.info(f"Archivo recibido correctamente en {file_path}")
 
@@ -184,3 +208,6 @@ class UDPSelectiveAck:
         self.ack_stop_event.set()
         if self.ack_thread:
             self.ack_thread.join()
+
+    def wait_for_end_of_file_ack(self):
+        pass

@@ -23,4 +23,3 @@ class Uploader:
         logger.debug(f"El comando es {settings.upload_command()} {filename}")
         protocol.send_message(f"{settings.upload_command()} {filename}".encode())
         protocol.send_file(file_path)
-        logger.info(f"Se envió el archivo {filename} correctamente")

@@ -69,5 +69,8 @@ class Settings:
     def max_warnings(self) -> int:
         return 3
 
+    def max_consecutives_retries(self) -> int:
+        return 10
+
 
 settings = Settings()
