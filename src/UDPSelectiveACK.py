@@ -16,7 +16,7 @@ class UDPSelectiveAck:
         self.not_acknowledged_packets = {}
         self.ack_thread = None
         self.ack_stop_event = threading.Event()
-        self.lock = threading.Lock()
+        self.ack_thread_lock = threading.Lock()
 
     def receive_packet(self, timeout=None):
         if self.message_queue:
@@ -43,11 +43,24 @@ class UDPSelectiveAck:
             try:
                 ack_packet = self.receive_packet(timeout=settings.timeout())
                 ack_number = ack_packet.sequence_number()
-                with self.lock:
-                    if ack_number in self.not_acknowledged_packets.keys():
-                        del self.not_acknowledged_packets[ack_number]
+                expected_packet = ack_number + 1
+                if ack_packet.is_an_ack():
+                    with self.ack_thread_lock:
+                        del self.not_acknowledged_packets[ack_number]  # El anterior al que me pide lo recibio si o si
+                        logger.debug(f"Llegó ACK-{ack_number} quedó esto: {self.not_acknowledged_packets.keys()}")
+                elif ack_packet.is_an_sack():
+                    left, right = ack_packet.sack_range()
+                    for sack_number in range(left, right):
+                        if sack_number in self.not_acknowledged_packets.keys():
+                            with self.ack_thread_lock:
+                                del self.not_acknowledged_packets[sack_number]
+                                logger.debug(f"Llegó SACK-{left, right} y quedó esto: {self.not_acknowledged_packets.keys()}")
 
-                    logger.debug(f"Se recibió el ack {ack_number}. Quedan sin ack {self.not_acknowledged_packets.keys()}")
+                    for sack_number in range(expected_packet, left):
+                        packet = self.not_acknowledged_packets[sack_number]
+                        packet_number = sack_number
+                        logger.debug(f"Reenviadno paquete {packet_number}")
+                        self.send_message(Packet(packet_number, packet).as_bytes())
             except self.timeout_error_class():
                 continue  # Ignoro el timeout
 
@@ -55,34 +68,32 @@ class UDPSelectiveAck:
         logger.info(f"Enviando archivo {file_path} a {self.external_host_address}")
 
         self.start_ack_thread()
-        
+
         with open(file_path, 'rb') as file_to_send:
             packet_number = 1
+            end_of_file = False
 
             while True:
                 # Envia paquetes hasta llenar la ventana de transmisión
                 while len(self.not_acknowledged_packets.keys()) < self.window_size:
                     file_chunk = file_to_send.read(settings.packet_size())
                     if not file_chunk:
+                        end_of_file = True
                         logger.debug(f"Fin de archivo")
                         break
 
                     packet = Packet(packet_number, file_chunk).as_bytes()
                     self.send_message(packet)
 
-                    with self.lock:
+                    with self.ack_thread_lock:
                         self.not_acknowledged_packets[packet_number] = packet
 
                     packet_number += 1
 
                 logger.debug(f"Acks faltantes despues de la ventana: {self.not_acknowledged_packets.keys()}")
-                with self.lock:
-                    for not_ack_packet_number, not_ack_packet in list(self.not_acknowledged_packets.items()):
-                        logger.debug(f"Reenviando paquete {not_ack_packet_number}")
-                        self.send_message(not_ack_packet)
 
                 # Romper si ya no hay más paquetes que enviar o confirmar
-                if len(self.not_acknowledged_packets) == 0 and not file_chunk:
+                if len(self.not_acknowledged_packets) == 0 and end_of_file:
                     break
 
         # Enviar señal de fin de archivo
@@ -113,25 +124,34 @@ class UDPSelectiveAck:
                     received_packets[packet_number] = payload
 
                     # Verificar si el paquete es el siguiente en la secuencia
-                    if packet_number == last_packet_received + 1:
-                        logger.debug(f"Paquete número {packet_number}. Escribiendo a archivo.")
-                        file_to_storage.write(payload)
-                        last_packet_received += 1
-
-                        # Escribir todos los paquetes subsecuentes que están en orden
-                        while last_packet_received + 1 in received_packets:
-                            logger.debug(f"Paquete subsecuente número {last_packet_received} Escribiendo a archivo.")
-                            last_packet_received += 1
+                    expected_packet = last_packet_received + 1
+                    if packet_number == expected_packet:
+                        last_packet_received = packet_number
+                        while last_packet_received in received_packets.keys():
                             file_to_storage.write(received_packets.pop(last_packet_received))
+                            last_packet_received += 1
+
+                        last_packet_received -= 1
+                        ack_packet = Packet(last_packet_received, settings.ack_command().encode()).as_bytes()
+                        logger.debug(f"Ultimo recibido: {last_packet_received}")
+                        self.send_message(ack_packet)
                     else:
-                        logger.debug(f"Paquete número {packet_number}. Fuera de orden. Guardando para después.")
+                        received_packets_numbers = list(received_packets.keys())  # [1, 2, 5, 6, 7], expected = 3
+                        range_start = expected_packet
+                        while range_start not in received_packets_numbers:
+                            range_start += 1
 
+                        range_end = range_start
+                        for i in range(range_start + 1, len(received_packets)):
+                            if i in received_packets_numbers:
+                                range_end += 1
+                            else:
+                                break
 
-                # Enviar un ACK para el paquete actual (aunque esté fuera de orden o duplicado)
-                logger.debug(f"Enviando ACK para paquete {packet_number}")
-                ack_packet = Packet(packet_number, settings.ack_command().encode()).as_bytes()
-                self.send_message(ack_packet)
-
+                        logger.debug(f"Recibi algo malo. Espero {expected_packet} pero tengo {range_start}-{range_end}")
+                        sack_packet = Packet(expected_packet, f"SACK:{range_start},{range_end}".encode()).as_bytes()
+                        self.send_message(sack_packet)
+                logger.info(f"Es duplicado {packet_number}")
             logger.info(f"Archivo recibido correctamente en {file_path}")
 
     def start_ack_thread(self):
