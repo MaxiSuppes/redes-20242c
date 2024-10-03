@@ -54,17 +54,19 @@ class UDPSelectiveAck:
                             print(self.not_acknowledged_packets.keys())
                 elif ack_packet.is_an_sack():
                     logger.debug(f"Recibido SACK-{ack_packet.sack_range()}")
-                    left, right = ack_packet.sack_range()
+                    left_str, right_str = ack_packet.sack_range()
+                    left, right = int(left_str), int(right_str)
                     logger.debug(f"left: {left}, right: {right}")
-                    for sack_number in range(int(left), int(right)):
+                    for sack_number in range(left, right + 1):
                         logger.debug(f"Revisando SACK-{sack_number}")
                         if sack_number in self.not_acknowledged_packets.keys():
                             del self.not_acknowledged_packets[sack_number]
                             logger.debug(f"Llegó SACK-{left, right} y quedó esto: {self.not_acknowledged_packets.keys()}")
 
-                    for sack_number in range(expected_packet, int(left)):
-                        packet = self.not_acknowledged_packets[sack_number]
-                        packet_number = sack_number
+                    logger.debug(f"TENGO QUE REENVIAR ESTO: {expected_packet} - {left}")
+                    for i in range(expected_packet - 1, left):
+                        packet = self.not_acknowledged_packets[i]
+                        packet_number = i
                         logger.debug(f"Reenviando paquete {packet_number}")
                         self.send_message(Packet(packet_number, packet).as_bytes())
             except self.timeout_error_class():
@@ -163,6 +165,9 @@ class UDPSelectiveAck:
                         sack_packet = Packet(expected_packet, f"SACK:{range_start},{range_end}".encode()).as_bytes()
                         self.send_message(sack_packet)
                 logger.info(f"Es duplicado {packet_number}")
+                ack_packet = Packet(packet_number, settings.ack_command().encode()).as_bytes()
+                self.send_message(ack_packet)
+
             logger.info(f"Archivo recibido correctamente en {file_path}")
 
     def start_ack_thread(self):

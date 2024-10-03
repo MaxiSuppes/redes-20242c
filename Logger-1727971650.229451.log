@@ -1,0 +1,1518 @@
+2024-10-03 13:07:30,361 - INFO - Servidor iniciado en 127.0.0.1:3000
+2024-10-03 13:07:35,606 - DEBUG - Nuevo cliente: ('127.0.0.1', 58894)
+2024-10-03 13:07:35,608 - INFO - Se solicitó el archivo enunciado.pdf
+2024-10-03 13:07:35,608 - INFO - Enviando archivo ./server_storage/enunciado.pdf a ('127.0.0.1', 58894)
+2024-10-03 13:07:35,609 - DEBUG - len not ack: 0
+2024-10-03 13:07:35,617 - DEBUG - Acks faltantes despues de la ventana: dict_keys([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+2024-10-03 13:07:35,618 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,622 - DEBUG - Acks faltantes despues de la ventana: dict_keys([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+2024-10-03 13:07:35,625 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,625 - DEBUG - Acks faltantes despues de la ventana: dict_keys([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+2024-10-03 13:07:35,631 - DEBUG - len not ack: 9
+2024-10-03 13:07:35,626 - DEBUG - Llegó ACK-1 quedó esto: dict_keys([2, 3, 4, 5, 6, 7, 8, 9, 10])
+2024-10-03 13:07:35,651 - DEBUG - Llegó ACK-2 quedó esto: dict_keys([3, 4, 5, 6, 7, 8, 9, 10])
+2024-10-03 13:07:35,662 - DEBUG - Llegó ACK-3 quedó esto: dict_keys([4, 5, 6, 7, 8, 9, 10])
+2024-10-03 13:07:35,665 - DEBUG - Llegó ACK-4 quedó esto: dict_keys([5, 6, 7, 8, 9, 10, 11])
+2024-10-03 13:07:35,707 - DEBUG - Llegó ACK-5 quedó esto: dict_keys([6, 7, 8, 9, 10, 11])
+2024-10-03 13:07:35,708 - DEBUG - Llegó ACK-6 quedó esto: dict_keys([7, 8, 9, 10, 11])
+2024-10-03 13:07:35,730 - DEBUG - Acks faltantes despues de la ventana: dict_keys([7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
+2024-10-03 13:07:35,733 - DEBUG - len not ack: 9
+2024-10-03 13:07:35,731 - DEBUG - Llegó ACK-7 quedó esto: dict_keys([8, 9, 10, 11, 12, 13, 14, 15, 16])
+2024-10-03 13:07:35,750 - DEBUG - Llegó ACK-8 quedó esto: dict_keys([9, 10, 11, 12, 13, 14, 15, 16])
+2024-10-03 13:07:35,796 - DEBUG - Llegó ACK-9 quedó esto: dict_keys([10, 11, 12, 13, 14, 15, 16])
+2024-10-03 13:07:35,810 - DEBUG - Llegó ACK-10 quedó esto: dict_keys([11, 12, 13, 14, 15, 16])
+2024-10-03 13:07:35,811 - DEBUG - Llegó ACK-11 quedó esto: dict_keys([12, 13, 14, 15, 16])
+2024-10-03 13:07:35,811 - DEBUG - Llegó ACK-12 quedó esto: dict_keys([13, 14, 15, 16])
+2024-10-03 13:07:35,811 - DEBUG - Llegó ACK-13 quedó esto: dict_keys([14, 15, 16])
+2024-10-03 13:07:35,840 - DEBUG - Llegó ACK-14 quedó esto: dict_keys([15, 16])
+2024-10-03 13:07:35,840 - DEBUG - Llegó ACK-15 quedó esto: dict_keys([16])
+2024-10-03 13:07:35,841 - DEBUG - Llegó ACK-16 quedó esto: dict_keys([])
+2024-10-03 13:07:35,841 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,842 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,842 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,842 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,842 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,842 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,843 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,843 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,843 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,843 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,843 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,843 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,843 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,843 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,844 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,844 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,844 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,844 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,844 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,845 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,845 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,845 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,845 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,845 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,851 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,852 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,854 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,856 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,856 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,856 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,856 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,858 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,858 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,858 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,858 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,848 - DEBUG - Recibido SACK-['18', '18']
+2024-10-03 13:07:35,859 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,864 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,864 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,864 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,865 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,865 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,865 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,865 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,865 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,865 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,866 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,866 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,866 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,866 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,859 - DEBUG - left: 18, right: 18
+2024-10-03 13:07:35,866 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,869 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,869 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,869 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,869 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,869 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,869 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,870 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,870 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,870 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,870 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,871 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,867 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,871 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,873 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,873 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,873 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,874 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,874 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,875 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,875 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,875 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,875 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,875 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,875 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,875 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,876 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,876 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,876 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,882 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,883 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,883 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,883 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,883 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,884 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,884 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,884 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,884 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,885 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,885 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,885 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,871 - DEBUG - Llegó SACK-(18, 18) y quedó esto: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26])
+2024-10-03 13:07:35,885 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,885 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,886 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 19, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,886 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,887 - DEBUG - Recibido SACK-['18', '19']
+2024-10-03 13:07:35,887 - DEBUG - left: 18, right: 19
+2024-10-03 13:07:35,887 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,887 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,888 - DEBUG - Llegó SACK-(18, 19) y quedó esto: dict_keys([17, 20, 21, 22, 23, 24, 25, 26, 27])
+2024-10-03 13:07:35,886 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,888 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,888 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 20, 21, 22, 23, 24, 25, 26, 27, 28])
+2024-10-03 13:07:35,889 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,890 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 20, 21, 22, 23, 24, 25, 26, 27, 28])
+2024-10-03 13:07:35,890 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,890 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 20, 21, 22, 23, 24, 25, 26, 27, 28])
+2024-10-03 13:07:35,891 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,889 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,891 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 20, 21, 22, 23, 24, 25, 26, 27, 28])
+2024-10-03 13:07:35,892 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,892 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 20, 21, 22, 23, 24, 25, 26, 27, 28])
+2024-10-03 13:07:35,893 - DEBUG - Recibido SACK-['18', '20']
+2024-10-03 13:07:35,893 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,894 - DEBUG - left: 18, right: 20
+2024-10-03 13:07:35,894 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 20, 21, 22, 23, 24, 25, 26, 27, 28])
+2024-10-03 13:07:35,895 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,895 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,896 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,896 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 20, 21, 22, 23, 24, 25, 26, 27, 28])
+2024-10-03 13:07:35,896 - DEBUG - Revisando SACK-20
+2024-10-03 13:07:35,896 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,898 - DEBUG - Llegó SACK-(18, 20) y quedó esto: dict_keys([17, 21, 22, 23, 24, 25, 26, 27, 28])
+2024-10-03 13:07:35,899 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 21, 22, 23, 24, 25, 26, 27, 28, 29])
+2024-10-03 13:07:35,899 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,900 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,900 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,900 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 21, 22, 23, 24, 25, 26, 27, 28, 29])
+2024-10-03 13:07:35,902 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,903 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 21, 22, 23, 24, 25, 26, 27, 28, 29])
+2024-10-03 13:07:35,903 - DEBUG - Recibido SACK-['18', '21']
+2024-10-03 13:07:35,904 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,905 - DEBUG - left: 18, right: 21
+2024-10-03 13:07:35,905 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 21, 22, 23, 24, 25, 26, 27, 28, 29])
+2024-10-03 13:07:35,906 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,906 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,907 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,908 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 21, 22, 23, 24, 25, 26, 27, 28, 29])
+2024-10-03 13:07:35,908 - DEBUG - Revisando SACK-20
+2024-10-03 13:07:35,908 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,909 - DEBUG - Revisando SACK-21
+2024-10-03 13:07:35,909 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 21, 22, 23, 24, 25, 26, 27, 28, 29])
+2024-10-03 13:07:35,909 - DEBUG - Llegó SACK-(18, 21) y quedó esto: dict_keys([17, 22, 23, 24, 25, 26, 27, 28, 29])
+2024-10-03 13:07:35,910 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,910 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,910 - DEBUG - len not ack: 9
+2024-10-03 13:07:35,912 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 22, 23, 24, 25, 26, 27, 28, 29, 30])
+2024-10-03 13:07:35,910 - DEBUG - Recibido SACK-['18', '22']
+2024-10-03 13:07:35,913 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,914 - DEBUG - left: 18, right: 22
+2024-10-03 13:07:35,914 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 22, 23, 24, 25, 26, 27, 28, 29, 30])
+2024-10-03 13:07:35,914 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,915 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,915 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,915 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 22, 23, 24, 25, 26, 27, 28, 29, 30])
+2024-10-03 13:07:35,915 - DEBUG - Revisando SACK-20
+2024-10-03 13:07:35,915 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,916 - DEBUG - Revisando SACK-21
+2024-10-03 13:07:35,916 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 22, 23, 24, 25, 26, 27, 28, 29, 30])
+2024-10-03 13:07:35,916 - DEBUG - Revisando SACK-22
+2024-10-03 13:07:35,916 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,917 - DEBUG - Llegó SACK-(18, 22) y quedó esto: dict_keys([17, 23, 24, 25, 26, 27, 28, 29, 30])
+2024-10-03 13:07:35,918 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,919 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,917 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 23, 24, 25, 26, 27, 28, 29, 30, 31])
+2024-10-03 13:07:35,919 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,920 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 23, 24, 25, 26, 27, 28, 29, 30, 31])
+2024-10-03 13:07:35,920 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,920 - DEBUG - Recibido SACK-['18', '23']
+2024-10-03 13:07:35,921 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 23, 24, 25, 26, 27, 28, 29, 30, 31])
+2024-10-03 13:07:35,921 - DEBUG - left: 18, right: 23
+2024-10-03 13:07:35,921 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,921 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,921 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 23, 24, 25, 26, 27, 28, 29, 30, 31])
+2024-10-03 13:07:35,922 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,922 - DEBUG - Revisando SACK-20
+2024-10-03 13:07:35,922 - DEBUG - Revisando SACK-21
+2024-10-03 13:07:35,922 - DEBUG - Revisando SACK-22
+2024-10-03 13:07:35,923 - DEBUG - Revisando SACK-23
+2024-10-03 13:07:35,923 - DEBUG - Llegó SACK-(18, 23) y quedó esto: dict_keys([17, 24, 25, 26, 27, 28, 29, 30, 31])
+2024-10-03 13:07:35,923 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,923 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,925 - DEBUG - Recibido SACK-['18', '24']
+2024-10-03 13:07:35,922 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,925 - DEBUG - left: 18, right: 24
+2024-10-03 13:07:35,926 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 24, 25, 26, 27, 28, 29, 30, 31, 32])
+2024-10-03 13:07:35,926 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,926 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,929 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,929 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 24, 25, 26, 27, 28, 29, 30, 31, 32])
+2024-10-03 13:07:35,930 - DEBUG - Revisando SACK-20
+2024-10-03 13:07:35,930 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,930 - DEBUG - Revisando SACK-21
+2024-10-03 13:07:35,930 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 24, 25, 26, 27, 28, 29, 30, 31, 32])
+2024-10-03 13:07:35,930 - DEBUG - Revisando SACK-22
+2024-10-03 13:07:35,931 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,931 - DEBUG - Revisando SACK-23
+2024-10-03 13:07:35,931 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 24, 25, 26, 27, 28, 29, 30, 31, 32])
+2024-10-03 13:07:35,932 - DEBUG - Revisando SACK-24
+2024-10-03 13:07:35,933 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,933 - DEBUG - Llegó SACK-(18, 24) y quedó esto: dict_keys([17, 25, 26, 27, 28, 29, 30, 31, 32])
+2024-10-03 13:07:35,934 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 25, 26, 27, 28, 29, 30, 31, 32, 33])
+2024-10-03 13:07:35,934 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,935 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,935 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,935 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 25, 26, 27, 28, 29, 30, 31, 32, 33])
+2024-10-03 13:07:35,936 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,936 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 25, 26, 27, 28, 29, 30, 31, 32, 33])
+2024-10-03 13:07:35,936 - DEBUG - Recibido SACK-['18', '25']
+2024-10-03 13:07:35,937 - DEBUG - left: 18, right: 25
+2024-10-03 13:07:35,937 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,937 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,937 - DEBUG - Revisando SACK-20
+2024-10-03 13:07:35,936 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,937 - DEBUG - Revisando SACK-21
+2024-10-03 13:07:35,938 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 25, 26, 27, 28, 29, 30, 31, 32, 33])
+2024-10-03 13:07:35,938 - DEBUG - Revisando SACK-22
+2024-10-03 13:07:35,938 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,938 - DEBUG - Revisando SACK-23
+2024-10-03 13:07:35,939 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 25, 26, 27, 28, 29, 30, 31, 32, 33])
+2024-10-03 13:07:35,939 - DEBUG - Revisando SACK-24
+2024-10-03 13:07:35,940 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,940 - DEBUG - Revisando SACK-25
+2024-10-03 13:07:35,941 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 25, 26, 27, 28, 29, 30, 31, 32, 33])
+2024-10-03 13:07:35,941 - DEBUG - Llegó SACK-(18, 25) y quedó esto: dict_keys([17, 26, 27, 28, 29, 30, 31, 32, 33])
+2024-10-03 13:07:35,941 - DEBUG - len not ack: 9
+2024-10-03 13:07:35,941 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,942 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,943 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 26, 27, 28, 29, 30, 31, 32, 33, 34])
+2024-10-03 13:07:35,943 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,943 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 26, 27, 28, 29, 30, 31, 32, 33, 34])
+2024-10-03 13:07:35,943 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,943 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 26, 27, 28, 29, 30, 31, 32, 33, 34])
+2024-10-03 13:07:35,944 - DEBUG - Recibido SACK-['18', '26']
+2024-10-03 13:07:35,944 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,945 - DEBUG - left: 18, right: 26
+2024-10-03 13:07:35,945 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,945 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,945 - DEBUG - Revisando SACK-20
+2024-10-03 13:07:35,945 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 26, 27, 28, 29, 30, 31, 32, 33, 34])
+2024-10-03 13:07:35,945 - DEBUG - Revisando SACK-21
+2024-10-03 13:07:35,946 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,946 - DEBUG - Revisando SACK-22
+2024-10-03 13:07:35,946 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 26, 27, 28, 29, 30, 31, 32, 33, 34])
+2024-10-03 13:07:35,947 - DEBUG - Revisando SACK-23
+2024-10-03 13:07:35,947 - DEBUG - Revisando SACK-24
+2024-10-03 13:07:35,947 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,948 - DEBUG - Revisando SACK-25
+2024-10-03 13:07:35,948 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 26, 27, 28, 29, 30, 31, 32, 33, 34])
+2024-10-03 13:07:35,948 - DEBUG - Revisando SACK-26
+2024-10-03 13:07:35,949 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,949 - DEBUG - Llegó SACK-(18, 26) y quedó esto: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34])
+2024-10-03 13:07:35,949 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,949 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,949 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,950 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,950 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,951 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,951 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,950 - DEBUG - Recibido SACK-['18', '27']
+2024-10-03 13:07:35,951 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,951 - DEBUG - left: 18, right: 27
+2024-10-03 13:07:35,952 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,952 - DEBUG - Revisando SACK-18
+2024-10-03 13:07:35,952 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,952 - DEBUG - Revisando SACK-19
+2024-10-03 13:07:35,953 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,953 - DEBUG - Revisando SACK-20
+2024-10-03 13:07:35,953 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,953 - DEBUG - Revisando SACK-21
+2024-10-03 13:07:35,953 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,954 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,954 - DEBUG - Revisando SACK-22
+2024-10-03 13:07:35,955 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,955 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,956 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,955 - DEBUG - Revisando SACK-23
+2024-10-03 13:07:35,956 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,956 - DEBUG - Revisando SACK-24
+2024-10-03 13:07:35,956 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,956 - DEBUG - Revisando SACK-25
+2024-10-03 13:07:35,956 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,956 - DEBUG - Revisando SACK-26
+2024-10-03 13:07:35,958 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 27, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,958 - DEBUG - Revisando SACK-27
+2024-10-03 13:07:35,958 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,959 - DEBUG - Llegó SACK-(18, 27) y quedó esto: dict_keys([17, 28, 29, 30, 31, 32, 33, 34, 35])
+2024-10-03 13:07:35,959 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 28, 29, 30, 31, 32, 33, 34, 35, 36])
+2024-10-03 13:07:35,959 - DEBUG - TENGO QUE REENVIAR ESTO: 18 - 18
+2024-10-03 13:07:35,960 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,960 - DEBUG - Reenviando paquete 17
+2024-10-03 13:07:35,961 - DEBUG - Acks faltantes despues de la ventana: dict_keys([17, 28, 29, 30, 31, 32, 33, 34, 35, 36])
+2024-10-03 13:07:35,961 - DEBUG - Llegó ACK-17 quedó esto: dict_keys([28, 29, 30, 31, 32, 33, 34, 35, 36])
+2024-10-03 13:07:35,961 - DEBUG - len not ack: 9
+2024-10-03 13:07:35,961 - DEBUG - Llegó ACK-28 quedó esto: dict_keys([29, 30, 31, 32, 33, 34, 35, 36])
+2024-10-03 13:07:35,962 - DEBUG - Acks faltantes despues de la ventana: dict_keys([29, 30, 31, 32, 33, 34, 35, 36, 37, 38])
+2024-10-03 13:07:35,962 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,963 - DEBUG - Llegó ACK-29 quedó esto: dict_keys([30, 31, 32, 33, 34, 35, 36, 37, 38])
+2024-10-03 13:07:35,963 - DEBUG - Acks faltantes despues de la ventana: dict_keys([30, 31, 32, 33, 34, 35, 36, 37, 38, 39])
+2024-10-03 13:07:35,963 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,964 - DEBUG - Acks faltantes despues de la ventana: dict_keys([30, 31, 32, 33, 34, 35, 36, 37, 38, 39])
+2024-10-03 13:07:35,964 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,965 - DEBUG - Acks faltantes despues de la ventana: dict_keys([30, 31, 32, 33, 34, 35, 36, 37, 38, 39])
+2024-10-03 13:07:35,965 - DEBUG - Llegó ACK-30 quedó esto: dict_keys([31, 32, 33, 34, 35, 36, 37, 38, 39])
+2024-10-03 13:07:35,966 - DEBUG - len not ack: 9
+2024-10-03 13:07:35,966 - DEBUG - Llegó ACK-31 quedó esto: dict_keys([32, 33, 34, 35, 36, 37, 38, 39])
+2024-10-03 13:07:35,967 - DEBUG - Llegó ACK-32 quedó esto: dict_keys([33, 34, 35, 36, 37, 38, 39, 40])
+2024-10-03 13:07:35,967 - DEBUG - Llegó ACK-33 quedó esto: dict_keys([34, 35, 36, 37, 38, 39, 40])
+2024-10-03 13:07:35,969 - DEBUG - Llegó ACK-34 quedó esto: dict_keys([35, 36, 37, 38, 39, 40, 41])
+2024-10-03 13:07:35,969 - DEBUG - Llegó ACK-35 quedó esto: dict_keys([36, 37, 38, 39, 40, 41, 42])
+2024-10-03 13:07:35,970 - DEBUG - Llegó ACK-36 quedó esto: dict_keys([37, 38, 39, 40, 41, 42])
+2024-10-03 13:07:35,970 - DEBUG - Llegó ACK-37 quedó esto: dict_keys([38, 39, 40, 41, 42])
+2024-10-03 13:07:35,970 - DEBUG - Llegó ACK-38 quedó esto: dict_keys([39, 40, 41, 42])
+2024-10-03 13:07:35,972 - DEBUG - Llegó ACK-39 quedó esto: dict_keys([40, 41, 42, 43, 44, 45, 46])
+2024-10-03 13:07:35,972 - DEBUG - Llegó ACK-40 quedó esto: dict_keys([41, 42, 43, 44, 45, 46])
+2024-10-03 13:07:35,973 - DEBUG - Llegó ACK-41 quedó esto: dict_keys([42, 43, 44, 45, 46])
+2024-10-03 13:07:35,973 - DEBUG - Llegó ACK-42 quedó esto: dict_keys([43, 44, 45, 46])
+2024-10-03 13:07:35,974 - DEBUG - Llegó ACK-43 quedó esto: dict_keys([44, 45, 46])
+2024-10-03 13:07:35,975 - DEBUG - Llegó ACK-44 quedó esto: dict_keys([45, 46])
+2024-10-03 13:07:35,976 - DEBUG - Llegó ACK-45 quedó esto: dict_keys([46])
+2024-10-03 13:07:35,978 - DEBUG - Acks faltantes despues de la ventana: dict_keys([46, 47, 48, 49, 50, 51, 52, 53, 54, 55])
+2024-10-03 13:07:35,979 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,979 - DEBUG - Acks faltantes despues de la ventana: dict_keys([46, 47, 48, 49, 50, 51, 52, 53, 54, 55])
+2024-10-03 13:07:35,979 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,979 - DEBUG - Acks faltantes despues de la ventana: dict_keys([46, 47, 48, 49, 50, 51, 52, 53, 54, 55])
+2024-10-03 13:07:35,979 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,979 - DEBUG - Llegó ACK-46 quedó esto: dict_keys([47, 48, 49, 50, 51, 52, 53, 54, 55])
+2024-10-03 13:07:35,980 - DEBUG - Acks faltantes despues de la ventana: dict_keys([47, 48, 49, 50, 51, 52, 53, 54, 55, 56])
+2024-10-03 13:07:35,980 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,981 - DEBUG - Llegó ACK-47 quedó esto: dict_keys([48, 49, 50, 51, 52, 53, 54, 55, 56])
+2024-10-03 13:07:35,981 - DEBUG - Llegó ACK-48 quedó esto: dict_keys([49, 50, 51, 52, 53, 54, 55, 56])
+2024-10-03 13:07:35,982 - DEBUG - Llegó ACK-49 quedó esto: dict_keys([50, 51, 52, 53, 54, 55, 56])
+2024-10-03 13:07:35,982 - DEBUG - Acks faltantes despues de la ventana: dict_keys([50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+2024-10-03 13:07:35,982 - DEBUG - len not ack: 10
+2024-10-03 13:07:35,983 - DEBUG - Acks faltantes despues de la ventana: dict_keys([50, 51, 52, 53, 54, 55, 56, 57, 58, 59])
+2024-10-03 13:07:35,983 - DEBUG - Llegó ACK-50 quedó esto: dict_keys([51, 52, 53, 54, 55, 56, 57, 58, 59])
+2024-10-03 13:07:35,983 - DEBUG - len not ack: 9
+2024-10-03 13:07:35,984 - DEBUG - Llegó ACK-51 quedó esto: dict_keys([52, 53, 54, 55, 56, 57, 58, 59])
+2024-10-03 13:07:36,219 - DEBUG - Llegó ACK-52 quedó esto: dict_keys([53, 54, 55, 56, 57, 58, 59])
+2024-10-03 13:07:36,227 - DEBUG - Llegó ACK-53 quedó esto: dict_keys([54, 55, 56, 57, 58, 59])
+2024-10-03 13:07:36,228 - DEBUG - Llegó ACK-54 quedó esto: dict_keys([55, 56, 57, 58, 59])
+2024-10-03 13:07:36,228 - DEBUG - Llegó ACK-55 quedó esto: dict_keys([56, 57, 58, 59])
+2024-10-03 13:07:36,228 - DEBUG - Llegó ACK-56 quedó esto: dict_keys([57, 58, 59])
+2024-10-03 13:07:36,230 - DEBUG - Llegó ACK-57 quedó esto: dict_keys([58, 59])
+2024-10-03 13:07:36,230 - DEBUG - Llegó ACK-58 quedó esto: dict_keys([59])
+2024-10-03 13:07:36,231 - DEBUG - Llegó ACK-59 quedó esto: dict_keys([])
+2024-10-03 13:07:36,272 - DEBUG - Acks faltantes despues de la ventana: dict_keys([60, 61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,274 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,275 - DEBUG - Acks faltantes despues de la ventana: dict_keys([60, 61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,275 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,275 - DEBUG - Acks faltantes despues de la ventana: dict_keys([60, 61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,275 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,284 - DEBUG - Acks faltantes despues de la ventana: dict_keys([60, 61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,284 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,288 - DEBUG - Acks faltantes despues de la ventana: dict_keys([60, 61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,289 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,289 - DEBUG - Acks faltantes despues de la ventana: dict_keys([60, 61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,289 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,289 - DEBUG - Acks faltantes despues de la ventana: dict_keys([60, 61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,289 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,290 - DEBUG - Acks faltantes despues de la ventana: dict_keys([60, 61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,292 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,294 - DEBUG - Llegó ACK-60 quedó esto: dict_keys([61, 62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,298 - DEBUG - Llegó ACK-61 quedó esto: dict_keys([62, 63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,299 - DEBUG - Llegó ACK-62 quedó esto: dict_keys([63, 64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,299 - DEBUG - Llegó ACK-63 quedó esto: dict_keys([64, 65, 66, 67, 68, 69])
+2024-10-03 13:07:36,299 - DEBUG - Llegó ACK-64 quedó esto: dict_keys([65, 66, 67, 68, 69])
+2024-10-03 13:07:36,300 - DEBUG - Llegó ACK-65 quedó esto: dict_keys([66, 67, 68, 69])
+2024-10-03 13:07:36,300 - DEBUG - Llegó ACK-66 quedó esto: dict_keys([67, 68, 69])
+2024-10-03 13:07:36,300 - DEBUG - Llegó ACK-67 quedó esto: dict_keys([68, 69])
+2024-10-03 13:07:36,301 - DEBUG - Llegó ACK-68 quedó esto: dict_keys([69])
+2024-10-03 13:07:36,301 - DEBUG - Llegó ACK-69 quedó esto: dict_keys([])
+2024-10-03 13:07:36,305 - DEBUG - Acks faltantes despues de la ventana: dict_keys([70, 71, 72, 73, 74, 75, 76, 77, 78, 79])
+2024-10-03 13:07:36,306 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,305 - DEBUG - Llegó ACK-70 quedó esto: dict_keys([71, 72, 73, 74, 75, 76, 77, 78, 79])
+2024-10-03 13:07:36,308 - DEBUG - Llegó ACK-71 quedó esto: dict_keys([72, 73, 74, 75, 76, 77, 78, 79])
+2024-10-03 13:07:36,309 - DEBUG - Llegó ACK-72 quedó esto: dict_keys([73, 74, 75, 76, 77, 78, 79, 80])
+2024-10-03 13:07:36,309 - DEBUG - Llegó ACK-73 quedó esto: dict_keys([74, 75, 76, 77, 78, 79, 80])
+2024-10-03 13:07:36,310 - DEBUG - Llegó ACK-74 quedó esto: dict_keys([75, 76, 77, 78, 79, 80])
+2024-10-03 13:07:36,310 - DEBUG - Llegó ACK-75 quedó esto: dict_keys([76, 77, 78, 79, 80])
+2024-10-03 13:07:36,310 - DEBUG - Llegó ACK-76 quedó esto: dict_keys([77, 78, 79, 80])
+2024-10-03 13:07:36,310 - DEBUG - Llegó ACK-77 quedó esto: dict_keys([78, 79, 80])
+2024-10-03 13:07:36,310 - DEBUG - Llegó ACK-78 quedó esto: dict_keys([79, 80])
+2024-10-03 13:07:36,311 - DEBUG - Llegó ACK-79 quedó esto: dict_keys([80])
+2024-10-03 13:07:36,311 - DEBUG - Llegó ACK-80 quedó esto: dict_keys([])
+2024-10-03 13:07:36,314 - DEBUG - Acks faltantes despues de la ventana: dict_keys([81, 82, 83, 84, 85, 86, 87, 88, 89, 90])
+2024-10-03 13:07:36,314 - DEBUG - Llegó ACK-81 quedó esto: dict_keys([82, 83, 84, 85, 86, 87, 88, 89, 90])
+2024-10-03 13:07:36,314 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,315 - DEBUG - Llegó ACK-82 quedó esto: dict_keys([83, 84, 85, 86, 87, 88, 89, 90])
+2024-10-03 13:07:36,317 - DEBUG - Llegó ACK-83 quedó esto: dict_keys([84, 85, 86, 87, 88, 89, 90])
+2024-10-03 13:07:36,317 - DEBUG - Llegó ACK-84 quedó esto: dict_keys([85, 86, 87, 88, 89, 90])
+2024-10-03 13:07:36,320 - DEBUG - Llegó ACK-85 quedó esto: dict_keys([86, 87, 88, 89, 90])
+2024-10-03 13:07:36,320 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
+2024-10-03 13:07:36,321 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,321 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
+2024-10-03 13:07:36,322 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,322 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
+2024-10-03 13:07:36,322 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,322 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
+2024-10-03 13:07:36,322 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,323 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
+2024-10-03 13:07:36,323 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,322 - DEBUG - Recibido SACK-['87', '87']
+2024-10-03 13:07:36,323 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
+2024-10-03 13:07:36,323 - DEBUG - left: 87, right: 87
+2024-10-03 13:07:36,323 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,324 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,325 - DEBUG - Llegó SACK-(87, 87) y quedó esto: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95])
+2024-10-03 13:07:36,325 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
+2024-10-03 13:07:36,326 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,326 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,328 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,329 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,330 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,330 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,330 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,330 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,330 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,331 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,331 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,331 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,332 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,332 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,332 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,332 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,332 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,332 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,333 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,333 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,333 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,333 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,333 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,335 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,335 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,335 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,336 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,336 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,336 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,336 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,336 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,337 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,338 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,338 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,339 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,330 - DEBUG - Recibido SACK-['87', '88']
+2024-10-03 13:07:36,340 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,340 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,340 - DEBUG - left: 87, right: 88
+2024-10-03 13:07:36,341 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,341 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 88, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,341 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,341 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,342 - DEBUG - Llegó SACK-(87, 88) y quedó esto: dict_keys([86, 89, 90, 91, 92, 93, 94, 95, 96])
+2024-10-03 13:07:36,342 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 89, 90, 91, 92, 93, 94, 95, 96, 97])
+2024-10-03 13:07:36,342 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,342 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 89, 90, 91, 92, 93, 94, 95, 96, 97])
+2024-10-03 13:07:36,342 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,342 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,344 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,344 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 89, 90, 91, 92, 93, 94, 95, 96, 97])
+2024-10-03 13:07:36,344 - DEBUG - Recibido SACK-['87', '89']
+2024-10-03 13:07:36,345 - DEBUG - left: 87, right: 89
+2024-10-03 13:07:36,344 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,345 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,346 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 89, 90, 91, 92, 93, 94, 95, 96, 97])
+2024-10-03 13:07:36,346 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,346 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,347 - DEBUG - Revisando SACK-89
+2024-10-03 13:07:36,348 - DEBUG - Llegó SACK-(87, 89) y quedó esto: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97])
+2024-10-03 13:07:36,348 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,348 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,348 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 89, 90, 91, 92, 93, 94, 95, 96, 97])
+2024-10-03 13:07:36,351 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,351 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,352 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,352 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,352 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,352 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,353 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,353 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,353 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,353 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,353 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,353 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,353 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,353 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,354 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,354 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,354 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,354 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,354 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,354 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,354 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,355 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,355 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,355 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,355 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,356 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,356 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,356 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,356 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,356 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,356 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,358 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,358 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,350 - DEBUG - Recibido SACK-['87', '90']
+2024-10-03 13:07:36,358 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,358 - DEBUG - left: 87, right: 90
+2024-10-03 13:07:36,358 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,359 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,360 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,359 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,360 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,360 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,360 - DEBUG - Acks faltantes despues de la ventana: dict_keys([86, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,360 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,489 - DEBUG - Revisando SACK-89
+2024-10-03 13:07:36,490 - DEBUG - Revisando SACK-90
+2024-10-03 13:07:36,490 - DEBUG - Llegó SACK-(87, 90) y quedó esto: dict_keys([86, 91, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,490 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,490 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,491 - DEBUG - Recibido SACK-['87', '91']
+2024-10-03 13:07:36,491 - DEBUG - left: 87, right: 91
+2024-10-03 13:07:36,491 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,491 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,491 - DEBUG - Revisando SACK-89
+2024-10-03 13:07:36,491 - DEBUG - Revisando SACK-90
+2024-10-03 13:07:36,491 - DEBUG - Revisando SACK-91
+2024-10-03 13:07:36,492 - DEBUG - Llegó SACK-(87, 91) y quedó esto: dict_keys([86, 92, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,492 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,492 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,492 - DEBUG - Recibido SACK-['87', '92']
+2024-10-03 13:07:36,492 - DEBUG - left: 87, right: 92
+2024-10-03 13:07:36,493 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,493 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,493 - DEBUG - Revisando SACK-89
+2024-10-03 13:07:36,493 - DEBUG - Revisando SACK-90
+2024-10-03 13:07:36,496 - DEBUG - Revisando SACK-91
+2024-10-03 13:07:36,496 - DEBUG - Revisando SACK-92
+2024-10-03 13:07:36,498 - DEBUG - Llegó SACK-(87, 92) y quedó esto: dict_keys([86, 93, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,500 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,500 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,504 - DEBUG - Recibido SACK-['87', '93']
+2024-10-03 13:07:36,504 - DEBUG - left: 87, right: 93
+2024-10-03 13:07:36,505 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,505 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,506 - DEBUG - Revisando SACK-89
+2024-10-03 13:07:36,506 - DEBUG - Revisando SACK-90
+2024-10-03 13:07:36,506 - DEBUG - Revisando SACK-91
+2024-10-03 13:07:36,506 - DEBUG - Revisando SACK-92
+2024-10-03 13:07:36,506 - DEBUG - Revisando SACK-93
+2024-10-03 13:07:36,507 - DEBUG - Llegó SACK-(87, 93) y quedó esto: dict_keys([86, 94, 95, 96, 97, 98])
+2024-10-03 13:07:36,507 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,508 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,508 - DEBUG - Recibido SACK-['87', '94']
+2024-10-03 13:07:36,508 - DEBUG - left: 87, right: 94
+2024-10-03 13:07:36,509 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,509 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,509 - DEBUG - Revisando SACK-89
+2024-10-03 13:07:36,509 - DEBUG - Revisando SACK-90
+2024-10-03 13:07:36,509 - DEBUG - Revisando SACK-91
+2024-10-03 13:07:36,509 - DEBUG - Revisando SACK-92
+2024-10-03 13:07:36,510 - DEBUG - Revisando SACK-93
+2024-10-03 13:07:36,510 - DEBUG - Revisando SACK-94
+2024-10-03 13:07:36,510 - DEBUG - Llegó SACK-(87, 94) y quedó esto: dict_keys([86, 95, 96, 97, 98])
+2024-10-03 13:07:36,510 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,510 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,510 - DEBUG - Recibido SACK-['87', '95']
+2024-10-03 13:07:36,511 - DEBUG - left: 87, right: 95
+2024-10-03 13:07:36,511 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,511 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,511 - DEBUG - Revisando SACK-89
+2024-10-03 13:07:36,512 - DEBUG - Revisando SACK-90
+2024-10-03 13:07:36,512 - DEBUG - Revisando SACK-91
+2024-10-03 13:07:36,512 - DEBUG - Revisando SACK-92
+2024-10-03 13:07:36,512 - DEBUG - Revisando SACK-93
+2024-10-03 13:07:36,512 - DEBUG - Revisando SACK-94
+2024-10-03 13:07:36,512 - DEBUG - Revisando SACK-95
+2024-10-03 13:07:36,514 - DEBUG - Llegó SACK-(87, 95) y quedó esto: dict_keys([86, 96, 97, 98])
+2024-10-03 13:07:36,514 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,515 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,515 - DEBUG - Recibido SACK-['87', '96']
+2024-10-03 13:07:36,516 - DEBUG - left: 87, right: 96
+2024-10-03 13:07:36,516 - DEBUG - Revisando SACK-87
+2024-10-03 13:07:36,516 - DEBUG - Revisando SACK-88
+2024-10-03 13:07:36,516 - DEBUG - Revisando SACK-89
+2024-10-03 13:07:36,516 - DEBUG - Revisando SACK-90
+2024-10-03 13:07:36,516 - DEBUG - Revisando SACK-91
+2024-10-03 13:07:36,516 - DEBUG - Revisando SACK-92
+2024-10-03 13:07:36,516 - DEBUG - Revisando SACK-93
+2024-10-03 13:07:36,518 - DEBUG - Revisando SACK-94
+2024-10-03 13:07:36,519 - DEBUG - Revisando SACK-95
+2024-10-03 13:07:36,519 - DEBUG - Revisando SACK-96
+2024-10-03 13:07:36,519 - DEBUG - Llegó SACK-(87, 96) y quedó esto: dict_keys([86, 97, 98])
+2024-10-03 13:07:36,519 - DEBUG - TENGO QUE REENVIAR ESTO: 87 - 87
+2024-10-03 13:07:36,519 - DEBUG - Reenviando paquete 86
+2024-10-03 13:07:36,520 - DEBUG - Llegó ACK-86 quedó esto: dict_keys([97, 98])
+2024-10-03 13:07:36,520 - DEBUG - Llegó ACK-97 quedó esto: dict_keys([98])
+2024-10-03 13:07:36,520 - DEBUG - Llegó ACK-98 quedó esto: dict_keys([])
+2024-10-03 13:07:36,360 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,545 - DEBUG - Llegó ACK-99 quedó esto: dict_keys([100, 101, 102, 103])
+2024-10-03 13:07:36,545 - DEBUG - Llegó ACK-100 quedó esto: dict_keys([101, 102, 103])
+2024-10-03 13:07:36,588 - DEBUG - Llegó ACK-101 quedó esto: dict_keys([102, 103, 104, 105, 106, 107, 108, 109])
+2024-10-03 13:07:36,589 - DEBUG - Llegó ACK-102 quedó esto: dict_keys([103, 104, 105, 106, 107, 108, 109])
+2024-10-03 13:07:36,589 - DEBUG - Llegó ACK-103 quedó esto: dict_keys([104, 105, 106, 107, 108, 109])
+2024-10-03 13:07:36,589 - DEBUG - Llegó ACK-104 quedó esto: dict_keys([105, 106, 107, 108, 109])
+2024-10-03 13:07:36,590 - DEBUG - Llegó ACK-105 quedó esto: dict_keys([106, 107, 108, 109])
+2024-10-03 13:07:36,590 - DEBUG - Llegó ACK-106 quedó esto: dict_keys([107, 108, 109])
+2024-10-03 13:07:36,590 - DEBUG - Llegó ACK-107 quedó esto: dict_keys([108, 109])
+2024-10-03 13:07:36,593 - DEBUG - Llegó ACK-108 quedó esto: dict_keys([109])
+2024-10-03 13:07:36,594 - DEBUG - Llegó ACK-109 quedó esto: dict_keys([110, 111, 112])
+2024-10-03 13:07:36,598 - DEBUG - Llegó ACK-110 quedó esto: dict_keys([111, 112])
+2024-10-03 13:07:36,599 - DEBUG - Llegó ACK-111 quedó esto: dict_keys([112])
+2024-10-03 13:07:36,602 - DEBUG - Llegó ACK-112 quedó esto: dict_keys([])
+2024-10-03 13:07:36,603 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,603 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,604 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,604 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,604 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,604 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,604 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,604 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,605 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,605 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,605 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,605 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,605 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,606 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,606 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,606 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,606 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,606 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,606 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,606 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,606 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,606 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,607 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,608 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,609 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,609 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,609 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,609 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,610 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,610 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,610 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,610 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,610 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,610 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,611 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,611 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,611 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,612 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,612 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,612 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,612 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,612 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,613 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,613 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,613 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,613 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,614 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,614 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,615 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,615 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,615 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,615 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,615 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,616 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,616 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,616 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,616 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,619 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,619 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,619 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,620 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,620 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,620 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,620 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,620 - DEBUG - Acks faltantes despues de la ventana: dict_keys([113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,620 - DEBUG - Llegó ACK-113 quedó esto: dict_keys([114, 115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,621 - DEBUG - Llegó ACK-114 quedó esto: dict_keys([115, 116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,621 - DEBUG - Llegó ACK-115 quedó esto: dict_keys([116, 117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,621 - DEBUG - Llegó ACK-116 quedó esto: dict_keys([117, 118, 119, 120, 121, 122])
+2024-10-03 13:07:36,621 - DEBUG - Llegó ACK-117 quedó esto: dict_keys([118, 119, 120, 121, 122])
+2024-10-03 13:07:36,621 - DEBUG - Llegó ACK-118 quedó esto: dict_keys([119, 120, 121, 122])
+2024-10-03 13:07:36,620 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,622 - DEBUG - Llegó ACK-119 quedó esto: dict_keys([120, 121, 122])
+2024-10-03 13:07:36,622 - DEBUG - Llegó ACK-120 quedó esto: dict_keys([121, 122])
+2024-10-03 13:07:36,622 - DEBUG - Llegó ACK-121 quedó esto: dict_keys([122])
+2024-10-03 13:07:36,622 - DEBUG - Llegó ACK-122 quedó esto: dict_keys([])
+2024-10-03 13:07:36,623 - DEBUG - Acks faltantes despues de la ventana: dict_keys([123, 124, 125, 126, 127, 128, 129, 130, 131, 132])
+2024-10-03 13:07:36,624 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,624 - DEBUG - Acks faltantes despues de la ventana: dict_keys([123, 124, 125, 126, 127, 128, 129, 130, 131, 132])
+2024-10-03 13:07:36,624 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,624 - DEBUG - Acks faltantes despues de la ventana: dict_keys([123, 124, 125, 126, 127, 128, 129, 130, 131, 132])
+2024-10-03 13:07:36,625 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,625 - DEBUG - Llegó ACK-123 quedó esto: dict_keys([124, 125, 126, 127, 128, 129, 130, 131, 132])
+2024-10-03 13:07:36,625 - DEBUG - Llegó ACK-124 quedó esto: dict_keys([125, 126, 127, 128, 129, 130, 131, 132])
+2024-10-03 13:07:36,628 - DEBUG - Acks faltantes despues de la ventana: dict_keys([125, 126, 127, 128, 129, 130, 131, 132, 133, 134])
+2024-10-03 13:07:36,628 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,628 - DEBUG - Acks faltantes despues de la ventana: dict_keys([125, 126, 127, 128, 129, 130, 131, 132, 133, 134])
+2024-10-03 13:07:36,629 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,630 - DEBUG - Llegó ACK-125 quedó esto: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134])
+2024-10-03 13:07:36,631 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,631 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,632 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,632 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,632 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,632 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,632 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,633 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,633 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,633 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,633 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,633 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,633 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,633 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,633 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,634 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,634 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,634 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,634 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,634 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,635 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,635 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,635 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,635 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,635 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,635 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,635 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,636 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,636 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,636 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,636 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,636 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,636 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,636 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,636 - DEBUG - Acks faltantes despues de la ventana: dict_keys([126, 127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,637 - DEBUG - Llegó ACK-126 quedó esto: dict_keys([127, 128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,637 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,638 - DEBUG - Llegó ACK-127 quedó esto: dict_keys([128, 129, 130, 131, 132, 133, 134, 135])
+2024-10-03 13:07:36,638 - DEBUG - Acks faltantes despues de la ventana: dict_keys([128, 129, 130, 131, 132, 133, 134, 135, 136, 137])
+2024-10-03 13:07:36,638 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,639 - DEBUG - Acks faltantes despues de la ventana: dict_keys([128, 129, 130, 131, 132, 133, 134, 135, 136, 137])
+2024-10-03 13:07:36,639 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,640 - DEBUG - Llegó ACK-128 quedó esto: dict_keys([129, 130, 131, 132, 133, 134, 135, 136, 137])
+2024-10-03 13:07:36,640 - DEBUG - Llegó ACK-129 quedó esto: dict_keys([130, 131, 132, 133, 134, 135, 136, 137])
+2024-10-03 13:07:36,640 - DEBUG - Llegó ACK-130 quedó esto: dict_keys([131, 132, 133, 134, 135, 136, 137])
+2024-10-03 13:07:36,640 - DEBUG - Llegó ACK-131 quedó esto: dict_keys([132, 133, 134, 135, 136, 137])
+2024-10-03 13:07:36,641 - DEBUG - Llegó ACK-132 quedó esto: dict_keys([133, 134, 135, 136, 137])
+2024-10-03 13:07:36,641 - DEBUG - Llegó ACK-133 quedó esto: dict_keys([134, 135, 136, 137])
+2024-10-03 13:07:36,641 - DEBUG - Llegó ACK-134 quedó esto: dict_keys([135, 136, 137])
+2024-10-03 13:07:36,641 - DEBUG - Llegó ACK-135 quedó esto: dict_keys([136, 137])
+2024-10-03 13:07:36,641 - DEBUG - Llegó ACK-136 quedó esto: dict_keys([137])
+2024-10-03 13:07:36,642 - DEBUG - Llegó ACK-137 quedó esto: dict_keys([])
+2024-10-03 13:07:36,642 - DEBUG - Acks faltantes despues de la ventana: dict_keys([138, 139, 140, 141, 142, 143, 144, 145, 146, 147])
+2024-10-03 13:07:36,643 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,644 - DEBUG - Acks faltantes despues de la ventana: dict_keys([138, 139, 140, 141, 142, 143, 144, 145, 146, 147])
+2024-10-03 13:07:36,645 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,645 - DEBUG - Acks faltantes despues de la ventana: dict_keys([138, 139, 140, 141, 142, 143, 144, 145, 146, 147])
+2024-10-03 13:07:36,645 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,645 - DEBUG - Llegó ACK-138 quedó esto: dict_keys([139, 140, 141, 142, 143, 144, 145, 146, 147])
+2024-10-03 13:07:36,646 - DEBUG - Llegó ACK-139 quedó esto: dict_keys([140, 141, 142, 143, 144, 145, 146, 147])
+2024-10-03 13:07:36,646 - DEBUG - Llegó ACK-140 quedó esto: dict_keys([141, 142, 143, 144, 145, 146, 147])
+2024-10-03 13:07:36,648 - DEBUG - Acks faltantes despues de la ventana: dict_keys([141, 142, 143, 144, 145, 146, 147, 148, 149, 150])
+2024-10-03 13:07:36,648 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,649 - DEBUG - Acks faltantes despues de la ventana: dict_keys([141, 142, 143, 144, 145, 146, 147, 148, 149, 150])
+2024-10-03 13:07:36,650 - DEBUG - Llegó ACK-141 quedó esto: dict_keys([142, 143, 144, 145, 146, 147, 148, 149, 150])
+2024-10-03 13:07:36,650 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,651 - DEBUG - Llegó ACK-142 quedó esto: dict_keys([143, 144, 145, 146, 147, 148, 149, 150])
+2024-10-03 13:07:36,652 - DEBUG - Llegó ACK-143 quedó esto: dict_keys([144, 145, 146, 147, 148, 149, 150])
+2024-10-03 13:07:36,652 - DEBUG - Acks faltantes despues de la ventana: dict_keys([144, 145, 146, 147, 148, 149, 150, 151, 152, 153])
+2024-10-03 13:07:36,653 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,653 - DEBUG - Acks faltantes despues de la ventana: dict_keys([144, 145, 146, 147, 148, 149, 150, 151, 152, 153])
+2024-10-03 13:07:36,653 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,653 - DEBUG - Acks faltantes despues de la ventana: dict_keys([144, 145, 146, 147, 148, 149, 150, 151, 152, 153])
+2024-10-03 13:07:36,653 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,654 - DEBUG - Acks faltantes despues de la ventana: dict_keys([144, 145, 146, 147, 148, 149, 150, 151, 152, 153])
+2024-10-03 13:07:36,654 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,654 - DEBUG - Acks faltantes despues de la ventana: dict_keys([144, 145, 146, 147, 148, 149, 150, 151, 152, 153])
+2024-10-03 13:07:36,654 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,654 - DEBUG - Llegó ACK-144 quedó esto: dict_keys([145, 146, 147, 148, 149, 150, 151, 152, 153])
+2024-10-03 13:07:36,655 - DEBUG - Llegó ACK-145 quedó esto: dict_keys([146, 147, 148, 149, 150, 151, 152, 153])
+2024-10-03 13:07:36,656 - DEBUG - Llegó ACK-146 quedó esto: dict_keys([147, 148, 149, 150, 151, 152, 153, 154])
+2024-10-03 13:07:36,656 - DEBUG - Llegó ACK-147 quedó esto: dict_keys([148, 149, 150, 151, 152, 153, 154])
+2024-10-03 13:07:36,656 - DEBUG - Llegó ACK-148 quedó esto: dict_keys([149, 150, 151, 152, 153, 154])
+2024-10-03 13:07:36,658 - DEBUG - Llegó ACK-149 quedó esto: dict_keys([150, 151, 152, 153, 154])
+2024-10-03 13:07:36,658 - DEBUG - Llegó ACK-150 quedó esto: dict_keys([151, 152, 153, 154])
+2024-10-03 13:07:36,659 - DEBUG - Llegó ACK-151 quedó esto: dict_keys([152, 153, 154])
+2024-10-03 13:07:36,659 - DEBUG - Llegó ACK-152 quedó esto: dict_keys([153, 154])
+2024-10-03 13:07:36,659 - DEBUG - Llegó ACK-153 quedó esto: dict_keys([154])
+2024-10-03 13:07:36,659 - DEBUG - Llegó ACK-154 quedó esto: dict_keys([])
+2024-10-03 13:07:36,660 - DEBUG - Acks faltantes despues de la ventana: dict_keys([155, 156, 157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,660 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,661 - DEBUG - Acks faltantes despues de la ventana: dict_keys([155, 156, 157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,661 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,661 - DEBUG - Acks faltantes despues de la ventana: dict_keys([155, 156, 157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,662 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,664 - DEBUG - Acks faltantes despues de la ventana: dict_keys([155, 156, 157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,667 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,668 - DEBUG - Acks faltantes despues de la ventana: dict_keys([155, 156, 157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,669 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,669 - DEBUG - Acks faltantes despues de la ventana: dict_keys([155, 156, 157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,669 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,669 - DEBUG - Acks faltantes despues de la ventana: dict_keys([155, 156, 157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,670 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,670 - DEBUG - Llegó ACK-155 quedó esto: dict_keys([156, 157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,670 - DEBUG - Llegó ACK-156 quedó esto: dict_keys([157, 158, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,671 - DEBUG - Recibido SACK-['158', '158']
+2024-10-03 13:07:36,671 - DEBUG - left: 158, right: 158
+2024-10-03 13:07:36,671 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,672 - DEBUG - Llegó SACK-(158, 158) y quedó esto: dict_keys([157, 159, 160, 161, 162, 163, 164])
+2024-10-03 13:07:36,672 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:36,672 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 159, 160, 161, 162, 163, 164, 165, 166, 167])
+2024-10-03 13:07:36,672 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:36,673 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,674 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 159, 160, 161, 162, 163, 164, 165, 166, 167])
+2024-10-03 13:07:36,674 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,675 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 159, 160, 161, 162, 163, 164, 165, 166, 167])
+2024-10-03 13:07:36,675 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,675 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 159, 160, 161, 162, 163, 164, 165, 166, 167])
+2024-10-03 13:07:36,675 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,674 - DEBUG - Recibido SACK-['158', '159']
+2024-10-03 13:07:36,676 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 159, 160, 161, 162, 163, 164, 165, 166, 167])
+2024-10-03 13:07:36,676 - DEBUG - left: 158, right: 159
+2024-10-03 13:07:36,677 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,681 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:36,681 - DEBUG - Llegó SACK-(158, 159) y quedó esto: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167])
+2024-10-03 13:07:36,681 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:36,681 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:36,682 - DEBUG - Recibido SACK-['158', '160']
+2024-10-03 13:07:36,682 - DEBUG - left: 158, right: 160
+2024-10-03 13:07:36,677 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,682 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,682 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,683 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,683 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,683 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,683 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,683 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,684 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,684 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,684 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,684 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,684 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,684 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,685 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,685 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,685 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,685 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,686 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,686 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,686 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,686 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,686 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,686 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,687 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,688 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,688 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,688 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,688 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,688 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,683 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:36,690 - DEBUG - Revisando SACK-160
+2024-10-03 13:07:36,690 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 160, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,691 - DEBUG - len not ack: 9
+2024-10-03 13:07:36,691 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,692 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,690 - DEBUG - Llegó SACK-(158, 160) y quedó esto: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168])
+2024-10-03 13:07:36,692 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:36,692 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,693 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:36,693 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,693 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,693 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,693 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,693 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,693 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,694 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,694 - DEBUG - Recibido SACK-['158', '161']
+2024-10-03 13:07:36,694 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,694 - DEBUG - left: 158, right: 161
+2024-10-03 13:07:36,694 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,695 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,695 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,696 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,696 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,696 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,697 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,698 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,698 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,698 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,698 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,698 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,699 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,699 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,699 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,700 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,700 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,700 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,700 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,700 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,701 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,701 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,701 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,701 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,702 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,702 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,702 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,702 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,702 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,703 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,703 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,703 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,703 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,703 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,703 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,703 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,704 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,704 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,696 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:36,704 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 161, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,704 - DEBUG - Revisando SACK-160
+2024-10-03 13:07:36,706 - DEBUG - Revisando SACK-161
+2024-10-03 13:07:36,705 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,706 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,706 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,707 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,707 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,708 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,706 - DEBUG - Llegó SACK-(158, 161) y quedó esto: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169])
+2024-10-03 13:07:36,709 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:36,709 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:36,708 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,709 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,709 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,710 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,710 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,712 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,712 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,713 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,713 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,713 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,713 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,713 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,713 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,713 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,714 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,714 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,714 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,714 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,714 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,714 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,715 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,715 - DEBUG - Recibido SACK-['158', '162']
+2024-10-03 13:07:36,715 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,715 - DEBUG - left: 158, right: 162
+2024-10-03 13:07:36,716 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,716 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:36,716 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,716 - DEBUG - Revisando SACK-160
+2024-10-03 13:07:36,716 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,717 - DEBUG - Revisando SACK-161
+2024-10-03 13:07:36,718 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,718 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 162, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,718 - DEBUG - Revisando SACK-162
+2024-10-03 13:07:36,718 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,719 - DEBUG - Llegó SACK-(158, 162) y quedó esto: dict_keys([157, 163, 164, 165, 166, 167, 168, 169, 170])
+2024-10-03 13:07:36,719 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:36,719 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:36,719 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 163, 164, 165, 166, 167, 168, 169, 170, 171])
+2024-10-03 13:07:36,720 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,720 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 163, 164, 165, 166, 167, 168, 169, 170, 171])
+2024-10-03 13:07:36,720 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,721 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 163, 164, 165, 166, 167, 168, 169, 170, 171])
+2024-10-03 13:07:36,721 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,721 - DEBUG - Recibido SACK-['158', '163']
+2024-10-03 13:07:36,722 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 163, 164, 165, 166, 167, 168, 169, 170, 171])
+2024-10-03 13:07:36,722 - DEBUG - left: 158, right: 163
+2024-10-03 13:07:36,723 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,723 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:36,723 - DEBUG - Revisando SACK-160
+2024-10-03 13:07:36,723 - DEBUG - Revisando SACK-161
+2024-10-03 13:07:36,723 - DEBUG - Revisando SACK-162
+2024-10-03 13:07:36,723 - DEBUG - Revisando SACK-163
+2024-10-03 13:07:36,723 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,723 - DEBUG - Llegó SACK-(158, 163) y quedó esto: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171])
+2024-10-03 13:07:36,724 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:36,724 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:36,724 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,725 - DEBUG - Recibido SACK-['158', '164']
+2024-10-03 13:07:36,725 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,726 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,726 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,726 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,726 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,726 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,726 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,726 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,727 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,728 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,728 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,728 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,728 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,728 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,728 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,730 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,730 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,730 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,730 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,730 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,730 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,731 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,731 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,731 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,731 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,731 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,731 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,731 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,725 - DEBUG - left: 158, right: 164
+2024-10-03 13:07:36,732 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,733 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,733 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,733 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,733 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,733 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,733 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,733 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,734 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,734 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:36,734 - DEBUG - len not ack: 10
+2024-10-03 13:07:36,735 - DEBUG - Revisando SACK-160
+2024-10-03 13:07:36,735 - DEBUG - Revisando SACK-161
+2024-10-03 13:07:36,735 - DEBUG - Revisando SACK-162
+2024-10-03 13:07:36,735 - DEBUG - Revisando SACK-163
+2024-10-03 13:07:36,823 - DEBUG - Revisando SACK-164
+2024-10-03 13:07:36,824 - DEBUG - Llegó SACK-(158, 164) y quedó esto: dict_keys([157, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,824 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:36,825 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:36,825 - DEBUG - Recibido SACK-['158', '165']
+2024-10-03 13:07:36,826 - DEBUG - left: 158, right: 165
+2024-10-03 13:07:36,826 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,826 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:36,826 - DEBUG - Revisando SACK-160
+2024-10-03 13:07:36,826 - DEBUG - Revisando SACK-161
+2024-10-03 13:07:36,826 - DEBUG - Revisando SACK-162
+2024-10-03 13:07:36,834 - DEBUG - Revisando SACK-163
+2024-10-03 13:07:36,835 - DEBUG - Revisando SACK-164
+2024-10-03 13:07:36,970 - DEBUG - Revisando SACK-165
+2024-10-03 13:07:36,970 - DEBUG - Llegó SACK-(158, 165) y quedó esto: dict_keys([157, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,970 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:36,970 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:36,971 - DEBUG - Recibido SACK-['158', '166']
+2024-10-03 13:07:36,980 - DEBUG - left: 158, right: 166
+2024-10-03 13:07:36,982 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:36,986 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:36,986 - DEBUG - Revisando SACK-160
+2024-10-03 13:07:36,735 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 164, 165, 166, 167, 168, 169, 170, 171, 172])
+2024-10-03 13:07:36,986 - DEBUG - Revisando SACK-161
+2024-10-03 13:07:36,988 - DEBUG - len not ack: 8
+2024-10-03 13:07:36,988 - DEBUG - Revisando SACK-162
+2024-10-03 13:07:36,989 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 166, 167, 168, 169, 170, 171, 172, 173, 174])
+2024-10-03 13:07:36,990 - DEBUG - Revisando SACK-163
+2024-10-03 13:07:37,002 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,003 - DEBUG - Revisando SACK-164
+2024-10-03 13:07:37,003 - DEBUG - Revisando SACK-165
+2024-10-03 13:07:37,003 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 166, 167, 168, 169, 170, 171, 172, 173, 174])
+2024-10-03 13:07:37,005 - DEBUG - Revisando SACK-166
+2024-10-03 13:07:37,005 - DEBUG - Llegó SACK-(158, 166) y quedó esto: dict_keys([157, 167, 168, 169, 170, 171, 172, 173, 174])
+2024-10-03 13:07:37,006 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:37,006 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:37,005 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,010 - DEBUG - Recibido SACK-['158', '167']
+2024-10-03 13:07:37,010 - DEBUG - left: 158, right: 167
+2024-10-03 13:07:37,010 - DEBUG - Acks faltantes despues de la ventana: dict_keys([157, 167, 168, 169, 170, 171, 172, 173, 174, 175])
+2024-10-03 13:07:37,011 - DEBUG - Revisando SACK-158
+2024-10-03 13:07:37,011 - DEBUG - Revisando SACK-159
+2024-10-03 13:07:37,012 - DEBUG - Revisando SACK-160
+2024-10-03 13:07:37,013 - DEBUG - Revisando SACK-161
+2024-10-03 13:07:37,013 - DEBUG - Revisando SACK-162
+2024-10-03 13:07:37,013 - DEBUG - Revisando SACK-163
+2024-10-03 13:07:37,013 - DEBUG - Revisando SACK-164
+2024-10-03 13:07:37,016 - DEBUG - Revisando SACK-165
+2024-10-03 13:07:37,016 - DEBUG - Revisando SACK-166
+2024-10-03 13:07:37,018 - DEBUG - Revisando SACK-167
+2024-10-03 13:07:37,018 - DEBUG - Llegó SACK-(158, 167) y quedó esto: dict_keys([157, 168, 169, 170, 171, 172, 173, 174, 175])
+2024-10-03 13:07:37,018 - DEBUG - TENGO QUE REENVIAR ESTO: 158 - 158
+2024-10-03 13:07:37,018 - DEBUG - Reenviando paquete 157
+2024-10-03 13:07:37,011 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,019 - DEBUG - Llegó ACK-157 quedó esto: dict_keys([168, 169, 170, 171, 172, 173, 174, 175])
+2024-10-03 13:07:37,019 - DEBUG - Llegó ACK-168 quedó esto: dict_keys([169, 170, 171, 172, 173, 174, 175, 176])
+2024-10-03 13:07:37,019 - DEBUG - Llegó ACK-169 quedó esto: dict_keys([170, 171, 172, 173, 174, 175, 176])
+2024-10-03 13:07:37,020 - DEBUG - Llegó ACK-170 quedó esto: dict_keys([171, 172, 173, 174, 175, 176])
+2024-10-03 13:07:37,020 - DEBUG - Llegó ACK-171 quedó esto: dict_keys([172, 173, 174, 175, 176])
+2024-10-03 13:07:37,021 - DEBUG - Llegó ACK-172 quedó esto: dict_keys([173, 174, 175, 176])
+2024-10-03 13:07:37,022 - DEBUG - Llegó ACK-173 quedó esto: dict_keys([174, 175, 176])
+2024-10-03 13:07:37,022 - DEBUG - Llegó ACK-174 quedó esto: dict_keys([175, 176])
+2024-10-03 13:07:37,023 - DEBUG - Llegó ACK-175 quedó esto: dict_keys([176])
+2024-10-03 13:07:37,023 - DEBUG - Llegó ACK-176 quedó esto: dict_keys([])
+2024-10-03 13:07:37,026 - DEBUG - Acks faltantes despues de la ventana: dict_keys([177, 178, 179, 180, 181, 182, 183, 184, 185, 186])
+2024-10-03 13:07:37,026 - DEBUG - Llegó ACK-177 quedó esto: dict_keys([178, 179, 180, 181, 182, 183, 184, 185, 186])
+2024-10-03 13:07:37,026 - DEBUG - Llegó ACK-178 quedó esto: dict_keys([179, 180, 181, 182, 183, 184, 185, 186])
+2024-10-03 13:07:37,032 - DEBUG - Llegó ACK-179 quedó esto: dict_keys([180, 181, 182, 183, 184, 185, 186])
+2024-10-03 13:07:37,026 - DEBUG - len not ack: 9
+2024-10-03 13:07:37,034 - DEBUG - Llegó ACK-180 quedó esto: dict_keys([181, 182, 183, 184, 185, 186])
+2024-10-03 13:07:37,039 - DEBUG - Llegó ACK-181 quedó esto: dict_keys([182, 183, 184, 185, 186, 187, 188])
+2024-10-03 13:07:37,040 - DEBUG - Llegó ACK-182 quedó esto: dict_keys([183, 184, 185, 186, 187, 188])
+2024-10-03 13:07:37,043 - DEBUG - Acks faltantes despues de la ventana: dict_keys([183, 184, 185, 186, 187, 188, 189, 190, 191, 192])
+2024-10-03 13:07:37,043 - DEBUG - Llegó ACK-183 quedó esto: dict_keys([184, 185, 186, 187, 188, 189, 190, 191, 192])
+2024-10-03 13:07:37,043 - DEBUG - len not ack: 9
+2024-10-03 13:07:37,044 - DEBUG - Llegó ACK-184 quedó esto: dict_keys([185, 186, 187, 188, 189, 190, 191, 192])
+2024-10-03 13:07:37,046 - DEBUG - Llegó ACK-185 quedó esto: dict_keys([186, 187, 188, 189, 190, 191, 192])
+2024-10-03 13:07:37,047 - DEBUG - Acks faltantes despues de la ventana: dict_keys([186, 187, 188, 189, 190, 191, 192, 193, 194, 195])
+2024-10-03 13:07:37,048 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,051 - DEBUG - Llegó ACK-186 quedó esto: dict_keys([187, 188, 189, 190, 191, 192, 193, 194, 195])
+2024-10-03 13:07:37,054 - DEBUG - Llegó ACK-187 quedó esto: dict_keys([188, 189, 190, 191, 192, 193, 194, 195])
+2024-10-03 13:07:37,054 - DEBUG - Llegó ACK-188 quedó esto: dict_keys([189, 190, 191, 192, 193, 194, 195])
+2024-10-03 13:07:37,055 - DEBUG - Llegó ACK-189 quedó esto: dict_keys([190, 191, 192, 193, 194, 195])
+2024-10-03 13:07:37,055 - DEBUG - Llegó ACK-190 quedó esto: dict_keys([191, 192, 193, 194, 195])
+2024-10-03 13:07:37,055 - DEBUG - Llegó ACK-191 quedó esto: dict_keys([192, 193, 194, 195])
+2024-10-03 13:07:37,056 - DEBUG - Llegó ACK-192 quedó esto: dict_keys([193, 194, 195])
+2024-10-03 13:07:37,056 - DEBUG - Llegó ACK-193 quedó esto: dict_keys([194, 195])
+2024-10-03 13:07:37,056 - DEBUG - Llegó ACK-194 quedó esto: dict_keys([195])
+2024-10-03 13:07:37,060 - DEBUG - Llegó ACK-195 quedó esto: dict_keys([196, 197, 198, 199, 200])
+2024-10-03 13:07:37,066 - DEBUG - Acks faltantes despues de la ventana: dict_keys([196, 197, 198, 199, 200, 201, 202, 203, 204, 205])
+2024-10-03 13:07:37,068 - DEBUG - Llegó ACK-196 quedó esto: dict_keys([197, 198, 199, 200, 201, 202, 203, 204, 205])
+2024-10-03 13:07:37,071 - DEBUG - Llegó ACK-197 quedó esto: dict_keys([198, 199, 200, 201, 202, 203, 204, 205])
+2024-10-03 13:07:37,072 - DEBUG - Llegó ACK-198 quedó esto: dict_keys([199, 200, 201, 202, 203, 204, 205])
+2024-10-03 13:07:37,073 - DEBUG - Llegó ACK-199 quedó esto: dict_keys([200, 201, 202, 203, 204, 205])
+2024-10-03 13:07:37,069 - DEBUG - len not ack: 9
+2024-10-03 13:07:37,074 - DEBUG - Llegó ACK-200 quedó esto: dict_keys([201, 202, 203, 204, 205, 206, 207, 208])
+2024-10-03 13:07:37,080 - DEBUG - Recibido SACK-['202', '202']
+2024-10-03 13:07:37,080 - DEBUG - left: 202, right: 202
+2024-10-03 13:07:37,080 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,081 - DEBUG - Llegó SACK-(202, 202) y quedó esto: dict_keys([201, 203, 204, 205, 206, 207, 208, 209])
+2024-10-03 13:07:37,081 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,081 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,087 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 203, 204, 205, 206, 207, 208, 209, 210, 211])
+2024-10-03 13:07:37,088 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,089 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 203, 204, 205, 206, 207, 208, 209, 210, 211])
+2024-10-03 13:07:37,090 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,102 - DEBUG - Recibido SACK-['202', '203']
+2024-10-03 13:07:37,105 - DEBUG - left: 202, right: 203
+2024-10-03 13:07:37,105 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,105 - DEBUG - Revisando SACK-203
+2024-10-03 13:07:37,105 - DEBUG - Llegó SACK-(202, 203) y quedó esto: dict_keys([201, 204, 205, 206, 207, 208, 209, 210, 211])
+2024-10-03 13:07:37,105 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,105 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,106 - DEBUG - Recibido SACK-['202', '204']
+2024-10-03 13:07:37,106 - DEBUG - left: 202, right: 204
+2024-10-03 13:07:37,106 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,106 - DEBUG - Revisando SACK-203
+2024-10-03 13:07:37,329 - DEBUG - Revisando SACK-204
+2024-10-03 13:07:37,329 - DEBUG - Llegó SACK-(202, 204) y quedó esto: dict_keys([201, 205, 206, 207, 208, 209, 210, 211])
+2024-10-03 13:07:37,104 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 203, 204, 205, 206, 207, 208, 209, 210, 211])
+2024-10-03 13:07:37,330 - DEBUG - len not ack: 8
+2024-10-03 13:07:37,331 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,331 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,333 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,333 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,333 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,334 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,334 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,334 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,334 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,336 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,338 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,342 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,344 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,344 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,344 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,345 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,345 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,345 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,345 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,345 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,346 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,348 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,348 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,348 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,349 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,349 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,349 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,350 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,350 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,350 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,350 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,350 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,350 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,351 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,351 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,351 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,351 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,352 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,352 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,352 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,352 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,352 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,352 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,352 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,353 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,353 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,353 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,353 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,353 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,353 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,354 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,355 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,356 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,356 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,356 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,357 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,359 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,359 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,329 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,360 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,430 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,430 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,430 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,422 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,452 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,453 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,454 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,453 - DEBUG - Recibido SACK-['202', '205']
+2024-10-03 13:07:37,454 - DEBUG - left: 202, right: 205
+2024-10-03 13:07:37,454 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,454 - DEBUG - Revisando SACK-203
+2024-10-03 13:07:37,454 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,455 - DEBUG - Revisando SACK-204
+2024-10-03 13:07:37,455 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 205, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,455 - DEBUG - Revisando SACK-205
+2024-10-03 13:07:37,456 - DEBUG - Llegó SACK-(202, 205) y quedó esto: dict_keys([201, 206, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,456 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,456 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,465 - DEBUG - Recibido SACK-['202', '206']
+2024-10-03 13:07:37,465 - DEBUG - left: 202, right: 206
+2024-10-03 13:07:37,465 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,469 - DEBUG - Revisando SACK-203
+2024-10-03 13:07:37,470 - DEBUG - Revisando SACK-204
+2024-10-03 13:07:37,473 - DEBUG - Revisando SACK-205
+2024-10-03 13:07:37,480 - DEBUG - Revisando SACK-206
+2024-10-03 13:07:37,480 - DEBUG - Llegó SACK-(202, 206) y quedó esto: dict_keys([201, 207, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,480 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,480 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,485 - DEBUG - Recibido SACK-['202', '207']
+2024-10-03 13:07:37,495 - DEBUG - left: 202, right: 207
+2024-10-03 13:07:37,496 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,496 - DEBUG - Revisando SACK-203
+2024-10-03 13:07:37,496 - DEBUG - Revisando SACK-204
+2024-10-03 13:07:37,496 - DEBUG - Revisando SACK-205
+2024-10-03 13:07:37,501 - DEBUG - Revisando SACK-206
+2024-10-03 13:07:37,501 - DEBUG - Revisando SACK-207
+2024-10-03 13:07:37,501 - DEBUG - Llegó SACK-(202, 207) y quedó esto: dict_keys([201, 208, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,501 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,501 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,502 - DEBUG - Recibido SACK-['202', '208']
+2024-10-03 13:07:37,502 - DEBUG - left: 202, right: 208
+2024-10-03 13:07:37,502 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,502 - DEBUG - Revisando SACK-203
+2024-10-03 13:07:37,502 - DEBUG - Revisando SACK-204
+2024-10-03 13:07:37,503 - DEBUG - Revisando SACK-205
+2024-10-03 13:07:37,503 - DEBUG - Revisando SACK-206
+2024-10-03 13:07:37,504 - DEBUG - Revisando SACK-207
+2024-10-03 13:07:37,504 - DEBUG - Revisando SACK-208
+2024-10-03 13:07:37,504 - DEBUG - Llegó SACK-(202, 208) y quedó esto: dict_keys([201, 209, 210, 211, 212, 213])
+2024-10-03 13:07:37,504 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,504 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,505 - DEBUG - Recibido SACK-['202', '209']
+2024-10-03 13:07:37,510 - DEBUG - left: 202, right: 209
+2024-10-03 13:07:37,510 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,510 - DEBUG - Revisando SACK-203
+2024-10-03 13:07:37,510 - DEBUG - Revisando SACK-204
+2024-10-03 13:07:37,510 - DEBUG - Revisando SACK-205
+2024-10-03 13:07:37,512 - DEBUG - Revisando SACK-206
+2024-10-03 13:07:37,512 - DEBUG - Revisando SACK-207
+2024-10-03 13:07:37,512 - DEBUG - Revisando SACK-208
+2024-10-03 13:07:37,512 - DEBUG - Revisando SACK-209
+2024-10-03 13:07:37,512 - DEBUG - Llegó SACK-(202, 209) y quedó esto: dict_keys([201, 210, 211, 212, 213])
+2024-10-03 13:07:37,512 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,512 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,516 - DEBUG - Recibido SACK-['202', '210']
+2024-10-03 13:07:37,516 - DEBUG - left: 202, right: 210
+2024-10-03 13:07:37,518 - DEBUG - Revisando SACK-202
+2024-10-03 13:07:37,518 - DEBUG - Revisando SACK-203
+2024-10-03 13:07:37,518 - DEBUG - Revisando SACK-204
+2024-10-03 13:07:37,518 - DEBUG - Revisando SACK-205
+2024-10-03 13:07:37,518 - DEBUG - Revisando SACK-206
+2024-10-03 13:07:37,455 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,518 - DEBUG - Revisando SACK-207
+2024-10-03 13:07:37,520 - DEBUG - Revisando SACK-208
+2024-10-03 13:07:37,520 - DEBUG - Revisando SACK-209
+2024-10-03 13:07:37,520 - DEBUG - Revisando SACK-210
+2024-10-03 13:07:37,520 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 210, 211, 212, 213, 214, 215, 216, 217, 218])
+2024-10-03 13:07:37,520 - DEBUG - Llegó SACK-(202, 210) y quedó esto: dict_keys([201, 211, 212, 213, 214, 215, 216, 217, 218])
+2024-10-03 13:07:37,520 - DEBUG - len not ack: 9
+2024-10-03 13:07:37,520 - DEBUG - TENGO QUE REENVIAR ESTO: 202 - 202
+2024-10-03 13:07:37,535 - DEBUG - Reenviando paquete 201
+2024-10-03 13:07:37,536 - DEBUG - Llegó ACK-201 quedó esto: dict_keys([211, 212, 213, 214, 215, 216, 217, 218, 219])
+2024-10-03 13:07:37,536 - DEBUG - Llegó ACK-211 quedó esto: dict_keys([212, 213, 214, 215, 216, 217, 218, 219])
+2024-10-03 13:07:37,536 - DEBUG - Llegó ACK-212 quedó esto: dict_keys([213, 214, 215, 216, 217, 218, 219])
+2024-10-03 13:07:37,536 - DEBUG - Llegó ACK-213 quedó esto: dict_keys([214, 215, 216, 217, 218, 219])
+2024-10-03 13:07:37,521 - DEBUG - Acks faltantes despues de la ventana: dict_keys([201, 211, 212, 213, 214, 215, 216, 217, 218, 219])
+2024-10-03 13:07:37,540 - DEBUG - len not ack: 6
+2024-10-03 13:07:37,542 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,542 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,543 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,544 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,544 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,545 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,545 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,545 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,546 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,546 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,546 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,546 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,546 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,546 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,548 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,548 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,548 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,549 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,549 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,549 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,549 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,549 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,550 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,550 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,550 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,550 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,550 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,551 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,551 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,551 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,551 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,551 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,551 - DEBUG - Acks faltantes despues de la ventana: dict_keys([214, 215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,552 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,552 - DEBUG - Llegó ACK-214 quedó esto: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223])
+2024-10-03 13:07:37,552 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,552 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,552 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,553 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,553 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,553 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,553 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,553 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,554 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,554 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,556 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,556 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,556 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,556 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,556 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,560 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,560 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,560 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,562 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,562 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,563 - DEBUG - Acks faltantes despues de la ventana: dict_keys([215, 216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,566 - DEBUG - len not ack: 9
+2024-10-03 13:07:37,566 - DEBUG - Llegó ACK-215 quedó esto: dict_keys([216, 217, 218, 219, 220, 221, 222, 223, 224])
+2024-10-03 13:07:37,570 - DEBUG - Acks faltantes despues de la ventana: dict_keys([216, 217, 218, 219, 220, 221, 222, 223, 224, 225])
+2024-10-03 13:07:37,571 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,571 - DEBUG - Llegó ACK-216 quedó esto: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225])
+2024-10-03 13:07:37,573 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,574 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,574 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,576 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,576 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,576 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,576 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,576 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,579 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,580 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,580 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,580 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,581 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,581 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,582 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,582 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,582 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,582 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,583 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,583 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,583 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,583 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,583 - DEBUG - Acks faltantes despues de la ventana: dict_keys([217, 218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,584 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,585 - DEBUG - Llegó ACK-217 quedó esto: dict_keys([218, 219, 220, 221, 222, 223, 224, 225, 226])
+2024-10-03 13:07:37,585 - DEBUG - Acks faltantes despues de la ventana: dict_keys([218, 219, 220, 221, 222, 223, 224, 225, 226, 227])
+2024-10-03 13:07:37,586 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,586 - DEBUG - Acks faltantes despues de la ventana: dict_keys([218, 219, 220, 221, 222, 223, 224, 225, 226, 227])
+2024-10-03 13:07:37,586 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,586 - DEBUG - Acks faltantes despues de la ventana: dict_keys([218, 219, 220, 221, 222, 223, 224, 225, 226, 227])
+2024-10-03 13:07:37,588 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,588 - DEBUG - Acks faltantes despues de la ventana: dict_keys([218, 219, 220, 221, 222, 223, 224, 225, 226, 227])
+2024-10-03 13:07:37,588 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,589 - DEBUG - Acks faltantes despues de la ventana: dict_keys([218, 219, 220, 221, 222, 223, 224, 225, 226, 227])
+2024-10-03 13:07:37,589 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,590 - DEBUG - Llegó ACK-218 quedó esto: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227])
+2024-10-03 13:07:37,590 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,593 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,593 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,593 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,595 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,595 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,595 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,595 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,596 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,596 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,596 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,596 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,597 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,598 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,598 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,598 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,598 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,599 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,599 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,600 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,602 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,602 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,602 - DEBUG - Acks faltantes despues de la ventana: dict_keys([219, 220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,603 - DEBUG - len not ack: 9
+2024-10-03 13:07:37,602 - DEBUG - Llegó ACK-219 quedó esto: dict_keys([220, 221, 222, 223, 224, 225, 226, 227, 228])
+2024-10-03 13:07:37,604 - DEBUG - Acks faltantes despues de la ventana: dict_keys([220, 221, 222, 223, 224, 225, 226, 227, 228, 229])
+2024-10-03 13:07:37,605 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,605 - DEBUG - Acks faltantes despues de la ventana: dict_keys([220, 221, 222, 223, 224, 225, 226, 227, 228, 229])
+2024-10-03 13:07:37,605 - DEBUG - Llegó ACK-220 quedó esto: dict_keys([221, 222, 223, 224, 225, 226, 227, 228, 229])
+2024-10-03 13:07:37,606 - DEBUG - len not ack: 9
+2024-10-03 13:07:37,609 - DEBUG - Acks faltantes despues de la ventana: dict_keys([221, 222, 223, 224, 225, 226, 227, 228, 229, 230])
+2024-10-03 13:07:37,714 - DEBUG - Llegó ACK-221 quedó esto: dict_keys([222, 223, 224, 225, 226, 227, 228, 229, 230])
+2024-10-03 13:07:37,715 - DEBUG - Llegó ACK-222 quedó esto: dict_keys([223, 224, 225, 226, 227, 228, 229, 230])
+2024-10-03 13:07:37,716 - DEBUG - Llegó ACK-223 quedó esto: dict_keys([224, 225, 226, 227, 228, 229, 230])
+2024-10-03 13:07:37,716 - DEBUG - Llegó ACK-224 quedó esto: dict_keys([225, 226, 227, 228, 229, 230])
+2024-10-03 13:07:37,716 - DEBUG - Llegó ACK-225 quedó esto: dict_keys([226, 227, 228, 229, 230])
+2024-10-03 13:07:37,716 - DEBUG - Llegó ACK-226 quedó esto: dict_keys([227, 228, 229, 230])
+2024-10-03 13:07:37,718 - DEBUG - Llegó ACK-227 quedó esto: dict_keys([228, 229, 230])
+2024-10-03 13:07:37,718 - DEBUG - Llegó ACK-228 quedó esto: dict_keys([229, 230])
+2024-10-03 13:07:37,718 - DEBUG - Llegó ACK-229 quedó esto: dict_keys([230])
+2024-10-03 13:07:37,718 - DEBUG - Llegó ACK-230 quedó esto: dict_keys([])
+2024-10-03 13:07:37,715 - DEBUG - len not ack: 9
+2024-10-03 13:07:37,721 - DEBUG - Llegó ACK-231 quedó esto: dict_keys([232])
+2024-10-03 13:07:37,723 - DEBUG - Llegó ACK-232 quedó esto: dict_keys([])
+2024-10-03 13:07:37,732 - DEBUG - Llegó ACK-233 quedó esto: dict_keys([234, 235])
+2024-10-03 13:07:37,733 - DEBUG - Llegó ACK-234 quedó esto: dict_keys([235])
+2024-10-03 13:07:37,733 - DEBUG - Llegó ACK-235 quedó esto: dict_keys([])
+2024-10-03 13:07:37,765 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,765 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,765 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,765 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,765 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,766 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,766 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,766 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,766 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,766 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,766 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,768 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,769 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,769 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,769 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,770 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,770 - DEBUG - Acks faltantes despues de la ventana: dict_keys([236, 237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,772 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,774 - DEBUG - Llegó ACK-236 quedó esto: dict_keys([237, 238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,777 - DEBUG - Llegó ACK-237 quedó esto: dict_keys([238, 239, 240, 241, 242, 243, 244, 245])
+2024-10-03 13:07:37,783 - DEBUG - Acks faltantes despues de la ventana: dict_keys([238, 239, 240, 241, 242, 243, 244, 245, 246, 247])
+2024-10-03 13:07:37,783 - DEBUG - len not ack: 10
+2024-10-03 13:07:37,786 - DEBUG - Llegó ACK-238 quedó esto: dict_keys([239, 240, 241, 242, 243, 244, 245, 246, 247])
+2024-10-03 13:07:37,788 - DEBUG - Llegó ACK-239 quedó esto: dict_keys([240, 241, 242, 243, 244, 245, 246, 247])
+2024-10-03 13:07:37,789 - DEBUG - Llegó ACK-240 quedó esto: dict_keys([241, 242, 243, 244, 245, 246, 247])
+2024-10-03 13:07:37,790 - DEBUG - Llegó ACK-241 quedó esto: dict_keys([242, 243, 244, 245, 246, 247])
+2024-10-03 13:07:37,791 - DEBUG - Llegó ACK-242 quedó esto: dict_keys([243, 244, 245, 246, 247])
+2024-10-03 13:07:37,792 - DEBUG - Llegó ACK-243 quedó esto: dict_keys([244, 245, 246, 247])
+2024-10-03 13:07:37,793 - DEBUG - Llegó ACK-244 quedó esto: dict_keys([245, 246, 247])
+2024-10-03 13:07:37,793 - DEBUG - Llegó ACK-245 quedó esto: dict_keys([246, 247])
+2024-10-03 13:07:37,794 - DEBUG - Llegó ACK-246 quedó esto: dict_keys([247])
+2024-10-03 13:07:37,794 - DEBUG - Llegó ACK-247 quedó esto: dict_keys([])
+2024-10-03 13:07:37,795 - DEBUG - Fin de archivo
+2024-10-03 13:07:37,800 - DEBUG - Llegó ACK-248 quedó esto: dict_keys([249, 250, 251])
+2024-10-03 13:07:37,802 - DEBUG - Llegó ACK-249 quedó esto: dict_keys([250, 251])
+2024-10-03 13:07:37,802 - DEBUG - Llegó ACK-250 quedó esto: dict_keys([251])
+2024-10-03 13:07:37,803 - DEBUG - Llegó ACK-251 quedó esto: dict_keys([])
+2024-10-03 13:07:37,802 - DEBUG - Acks faltantes despues de la ventana: dict_keys([249, 250, 251])
+2024-10-03 13:07:37,803 - DEBUG - Enviando señal de fin de archivo
+2024-10-03 13:07:39,808 - INFO - Se envió el archivo enunciado.pdf correctamente
